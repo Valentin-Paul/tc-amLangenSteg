@@ -1,0 +1,17 @@
+.navbar a {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 300;
+    font-family: 'SF Sports Night', sans-serif;
+}
+
+.navbar  {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1.5rem;
+}
+
+.navbar a{
+    text-decoration: none !important;
+}
+
