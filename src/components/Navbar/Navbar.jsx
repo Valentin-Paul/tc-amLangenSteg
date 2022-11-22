@@ -1,29 +1,50 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { AuthContext } from "../../context/auth.context";
+import LocomotiveScroll from "locomotive-scroll";
 
 function Navbar() {
   // Subscribe to the AuthContext to gain access to
   // the values from AuthContext.Provider's `value` prop
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
+
+
+  useEffect(()=>{
+
+    let scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container"),
+      smooth: true
+    })
+
+    const anchorLinks = document.querySelectorAll('a[href^=\\#]:not([href$=\\#])');
+
+    anchorLinks.forEach((anchorLink) => {
+      let hashval = anchorLink.getAttribute('href');
+      let target = document.querySelector(hashval);
+  
+      anchorLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+  
+        scroll.scrollTo(target);
+      });
+    });
+  })
+
+
+
   return (
-    <nav className="navbar">
-      <Link to="/">
+    <nav className="navbar" >
+      <Link to="/" >
         <a href="#home">Home</a>
-      </Link>
-
-     
-      <a href="#aktuelles">Aktuelles</a>
-     
-
+      </Link>     
+        <a href="#aktuelles" >Aktuelles</a>
       
-        <a href="#mannschaften">Mannschaften</a>
-      
+        <a href="#mannschaften" >Mannschaften</a>
 
-     
-        <a href="#mitgliedschaft">Mitgliedschaft</a>
+        <a href="#mitgliedschaft" >Mitgliedschaft</a>
       
 
 
