@@ -1,20 +1,30 @@
 import "./HomePage.css";
-import court from "../images/maurits-bausenhart-XtcZbSPVJ3A-unsplash.jpg"
+import court from "../images/maurits_bausenhart_XtcZbSPVJ3A_unsplash_half_trans.png"
 import second from "../images/raphael-lovaski-xLS_W6RVx-8-unsplash.jpg"
 import third from "../images/moises-alex-WqI-PbYugn4-unsplash.jpg"
 import forth from "../images/pexels-cottonbro-studio-5740517.jpg"
 import  fifth from "../images/ben-hershey-K9HgyI3qmqA-unsplash.jpg"
+import sixth from "../images/erwan-hesry-uJ-OO3aZsSQ-unsplash.jpg"
 import LocomotiveScroll from 'locomotive-scroll';
+import "../../components/scroll.css"
 import { useEffect } from "react";
 
 
 function HomePage() {
 
+  useEffect(()=>{
+
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container"),
+      smooth: true
+    })
+  })
+
 
   return (
-    <div className="homepage">
-    <div className="court" style={{ backgroundImage: `url(${court})` }}>
-     <div className="header" id="home">
+    <div className="homepage" data-scroll-container>
+    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="2">
+     <div className="header" id="home" data-scroll data-scroll-speed="1">
     <div className="grid"></div>
     <div className="lines"></div>
     <h1>
@@ -23,26 +33,34 @@ function HomePage() {
     </h1>
     <h2>Tennis Club</h2>
 
-    <h3>TC Am Langen Steg e.V. in Weiden in der Oberpfalz</h3>
+    <h3 >TC Am Langen Steg e.V. in Weiden in der Oberpfalz</h3>
     </div>
     </div>
 
-    <div className="container" id="aktuelles">
-    <div className="text">
+
+
+    {/* // AKTUELLES */}
+
+    <div className="container" id="aktuelles" >
+    <div className="text" data-scroll data-scroll-speed="3.5">
     <h1>Aktuelles</h1>
     <h3>Hauptversammlung</h3>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     <h3>Wanderung</h3>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
     </div>
-    <div className="image" style={{ backgroundImage: `url(${forth})` }}>
+    <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed="1.5">
     </div>
     </div>
 
+
+
+{/* // MANNSCHAFTEN */}
+
     <div className="container" id="mannschaften">
-    <div className="image" style={{ backgroundImage: `url(${third})` }}></div>
-    <div className="text">
-    <h1>Mannschaften</h1>
+    <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed="1"></div>
+    <div className="text" data-scroll data-scroll-speed="3.5">
+    <h1 >Mannschaften</h1>
 
 <div className="team">
 <h3>Mädchen 15 Nordliga 2 Gr. 446</h3>
@@ -66,7 +84,7 @@ function HomePage() {
    
 
     <div className="container" id="mitgliedschaft">
-    <div className="text mitgliedschaft">
+    <div className="text mitgliedschaft" data-scroll data-scroll-speed="2.5">
     <h1>Mitgliedschaft</h1>
     <p>Wir freuen uns, dass Sie sich für den TC Am Langen Steg interessieren! Möchten Sie selbst Mitglied werden? Im Folgenden finden Sie die aktuellen Beiträge für Mitglieder sowie einen Aufnahmeantrag zum downloaden und ausdrucken.</p>
     <h3>Beiträge</h3>
@@ -119,14 +137,14 @@ function HomePage() {
     <a className="link">Link zum PDF Formular</a>
     </div>
 
-    <div className="image" style={{ backgroundImage: `url(${second})` }}>
+    <div className="image" style={{ backgroundImage: `url(${second})` }} data-scroll  data-scroll-speed="1">
     </div>
     </div>
 
 
     <div className="container">
-    <div className="image" style={{ backgroundImage: `url(${fifth})` }}></div>
-    <div className="text kontakt">
+    <div className="image" style={{ backgroundImage: `url(${fifth})` }} data-scroll  data-scroll-speed="1"></div>
+    <div className="text kontakt" data-scroll  data-scroll-speed="2.5">
     <h1>Kontakt</h1>
     <h4>Solltest du Fragen, Anliegen oder Kritik haben - Schreibe uns einfach eine Nachricht oder rufe an! </h4>
     <div className="adressen">
@@ -155,7 +173,7 @@ function HomePage() {
 
     
       <div className="container">
-    <div className="text">
+    <div className="text" data-scroll  data-scroll-speed="2.5">
     <h1>Vereinsleitung</h1>
     <h3>Vorstand</h3>
     <div className="vereinsleitung">
@@ -196,7 +214,7 @@ function HomePage() {
     
     
     </div>
-    <div className="image" style={{ backgroundImage: `url(${forth})` }}>
+    <div className="image" style={{ backgroundImage: `url(${sixth})` }} data-scroll  data-scroll-speed="1">
     </div>
     </div>
 
