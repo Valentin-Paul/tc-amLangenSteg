@@ -2,5 +2,7 @@
 
 .App {
   text-align: center;
-  font-family: 'TT Teds', sans-serif;                                           
+  font-family: 'TT Teds', sans-serif;    
+  margin: 0;
+  padding: 0;                                       
 }
