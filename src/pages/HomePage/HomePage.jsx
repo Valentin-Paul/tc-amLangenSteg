@@ -142,7 +142,7 @@ function HomePage() {
     </div>
 
 
-    <div className="container">
+    <div className="container" id="kontakt">
     <div className="image" style={{ backgroundImage: `url(${fifth})` }} data-scroll  data-scroll-speed="1"></div>
     <div className="text kontakt" data-scroll  data-scroll-speed="2.5">
     <h1>Kontakt</h1>
