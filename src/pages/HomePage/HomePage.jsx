@@ -16,14 +16,22 @@ function HomePage() {
 
     const scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container"),
-      smooth: true
+      smooth: true,
+      mobile: {
+        breakpoint: 0,
+        smooth: true,
+      },
+      tablet: {
+        breakpoint: 0,
+        smooth: true,
+      },
     })
   })
 
 
   return (
     <div className="homepage" data-scroll-container>
-    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="2">
+    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="1">
      <div className="header" id="home" data-scroll data-scroll-speed="1">
     <div className="grid"></div>
     <div className="lines"></div>
@@ -36,7 +44,7 @@ function HomePage() {
     <h3 >TC Am Langen Steg e.V. in Weiden in der Oberpfalz</h3>
     </div>
     </div>
-
+ 
 
 
     {/* // AKTUELLES */}
