@@ -7,7 +7,8 @@ import  fifth from "../images/ben-hershey-K9HgyI3qmqA-unsplash.jpg"
 import sixth from "../images/erwan-hesry-uJ-OO3aZsSQ-unsplash.jpg"
 import LocomotiveScroll from 'locomotive-scroll';
 import "../../components/scroll.css"
-import { useEffect } from "react";
+import { useEffect,useState } from "react";
+import { Map, Marker,  ZoomControl } from "pigeon-maps"
 
 
 function HomePage() {
@@ -26,8 +27,39 @@ function HomePage() {
         smooth: true,
       },
     })
+
+    const anchorLinks = document.querySelectorAll(
+      'a[href^=\\#]:not([href$=\\#])'
+    );
+
+    anchorLinks.forEach((anchorLink) => {
+      let hashval = anchorLink.getAttribute('href');
+      let target = document.querySelector(hashval);
+  
+      anchorLink.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+  
+        anchorLinks.forEach((anchorLink) => {
+          anchorLink.classList.remove('active');
+        });
+  
+        e.target.classList.add('active');
+  
+        scroll.scrollTo(target);
+      });
+    });
   })
 
+  const [hue, setHue] = useState(0)
+  const color = `hsl(${hue +700 % 360}deg 60% 50%)`
+
+  // const location = {
+  //   address: '1600 Amphitheatre Parkway, Mountain View, california.',
+  //   lat: 37.42216,
+  //   lng: -122.08427,
+  // }
+  
 
   return (
     <div className="homepage" data-scroll-container>
@@ -42,6 +74,8 @@ function HomePage() {
     <h2>Tennis Club</h2>
 
     <h3 >TC Am Langen Steg e.V. in Weiden in der Oberpfalz</h3>
+
+    
     </div>
     </div>
  
@@ -52,6 +86,7 @@ function HomePage() {
     <div className="container" id="aktuelles" >
     <div className="text" data-scroll data-scroll-speed="3.5">
     <h1>Aktuelles</h1>
+  
     <h3>Hauptversammlung</h3>
     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     <h3>Wanderung</h3>
@@ -169,7 +204,17 @@ function HomePage() {
       <p>92615 Weiden</p> 
     </div>
     </div>
-    
+
+    <Map height={300} defaultCenter={[49.683893, 12.172768]} defaultZoom={15}>
+      <Marker 
+        width={35}
+        anchor={[49.683893, 12.172768]} 
+        color={color} 
+        onClick={() => setHue(hue + 20)} 
+      />
+      < ZoomControl/>
+    </Map>
+   
     <p>Telefon: 0961/38824610</p>
     <p>Email: info@tcamlangensteg.de</p>
 
