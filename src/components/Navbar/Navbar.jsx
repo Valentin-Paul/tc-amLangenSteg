@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useContext, useEffect } from "react";
 import { AuthContext } from "../../context/auth.context";
 import LocomotiveScroll from "locomotive-scroll";
+import menuIcon from "../../pages/images/menu.png"
 
 function Navbar() {
   // Subscribe to the AuthContext to gain access to
@@ -14,12 +15,20 @@ function Navbar() {
   useEffect(()=>{
 
     let scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container"),
-      smooth: true
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      mobile: {
+        smooth: true,
+      },
+      tablet: {
+        smooth: true,
+      },
     })
 
-    const anchorLinks = document.querySelectorAll('a[href^=\\#]:not([href$=\\#])');
-
+    const anchorLinks = document.querySelectorAll(
+      'a[href^=\\#]:not([href$=\\#])'
+    );
+  
     anchorLinks.forEach((anchorLink) => {
       let hashval = anchorLink.getAttribute('href');
       let target = document.querySelector(hashval);
@@ -28,52 +37,110 @@ function Navbar() {
         e.preventDefault();
         e.stopPropagation();
   
+        anchorLinks.forEach((anchorLink) => {
+          anchorLink.classList.remove('active');
+        });
+  
+        e.target.classList.add('active');
+  
         scroll.scrollTo(target);
       });
     });
+  
   })
 
 
 
   return (
-    <nav className="navbar" >
-      <Link to="/" >
-        <a href="#home">Home</a>
-      </Link>     
-        <a href="#aktuelles" >Aktuelles</a>
+
+
+<nav className="navbar navbar-expand-lg ">
+  <div className="space-between container-fluid">
+    <div className="home-button">
+
+    <Link to="/" >
+    <a className="navbar-brand" href="#home" data-scroll-to>Home</a>
+    </Link>  
+
+    </div>
+   <div className="menu-icon">
+   <button  style={{ backgroundImage: `url(${menuIcon})`}} className="navbar-toggler custom-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span  className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse " id="navbarSupportedContent" >
+      <ul className="navbar-nav space-evenly">
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#aktuelles" data-scroll-to>Aktuelles</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#mannschaften" data-scroll-to>Mannschaften</a>
+        </li>
+        <li className="nav-item">
+          <a className="nav-link active" aria-current="page" href="#mitgliedschaft" data-scroll-to>Mitgliedschaft</a>
+        </li>
+       
+        <li className="nav-item dropdown">
+          <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Mehr
+          </a>
+          <ul className="dropdown-menu">
+          <li><a className="dropdown-item" href="#kontakt">Kontakt</a></li>
+            <li><a className="dropdown-item" href="#">Impressum</a></li>
+            <li><a className="dropdown-item" href="#">Login</a></li>
+        
+            <li><a className="dropdown-item" href="#">Sign Up</a></li>
+          </ul>
+        </li>
+        
+      </ul>
+   </div>
+   
+  
+    </div>
+  </div>
+</nav>
+
+    
+
+
+    // <nav className="navbar" >
+    //   <Link to="/" >
+    //     <a href="#home">Home</a>
+    //   </Link>     
+    //     <a href="#aktuelles" >Aktuelles</a>
       
-        <a href="#mannschaften" >Mannschaften</a>
+    //     <a href="#mannschaften" >Mannschaften</a>
 
-        <a href="#mitgliedschaft" >Mitgliedschaft</a>
+    //     <a href="#mitgliedschaft" >Mitgliedschaft</a>
       
 
 
-      {isLoggedIn && (
-        <>
-          <button onClick={logOutUser}>Logout</button>
+    //   {isLoggedIn && (
+    //     <>
+    //       <button onClick={logOutUser}>Logout</button>
 
-          <Link to="/profile">
-            <a>Profile</a>
-            {/* <img src="https://picsum.photos/id/402/200/300" style={{ width: 50, height: 50, borderRadius: 25}} alt="profile" /> */}
-          </Link>
+    //       <Link to="/profile">
+    //         <a>Profile</a>
+    //         {/* <img src="https://picsum.photos/id/402/200/300" style={{ width: 50, height: 50, borderRadius: 25}} alt="profile" /> */}
+    //       </Link>
 
-          <span>{user && user.name}</span>
-        </>
-      )}
+    //       <span>{user && user.name}</span>
+    //     </>
+    //   )}
 
-      {!isLoggedIn && (
-        <>
-          <Link to="/signup">
-            {" "}
-            <a>Sign Up</a>{" "}
-          </Link>
-          <Link to="/login">
-            {" "}
-            <a>Login</a>{" "}
-          </Link>
-        </>
-      )}
-    </nav>
+    //   {!isLoggedIn && (
+    //     <>
+    //       <Link to="/signup">
+    //         {" "}
+    //         <a>Sign Up</a>{" "}
+    //       </Link>
+    //       <Link to="/login">
+    //         {" "}
+    //         <a>Login</a>{" "}
+    //       </Link>
+    //     </>
+    //   )}
+    // </nav>
   );
 }
 
