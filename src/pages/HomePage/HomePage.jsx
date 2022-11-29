@@ -5,6 +5,7 @@ import third from "../images/moises-alex-WqI-PbYugn4-unsplash.jpg"
 import forth from "../images/pexels-cottonbro-studio-5740517.jpg"
 import  fifth from "../images/ben-hershey-K9HgyI3qmqA-unsplash.jpg"
 import sixth from "../images/erwan-hesry-uJ-OO3aZsSQ-unsplash.jpg"
+import upArrows from "../images/up-arrows.png"
 import LocomotiveScroll from 'locomotive-scroll';
 import "../../components/scroll.css"
 import { useEffect,useState } from "react";
@@ -27,11 +28,10 @@ function HomePage() {
         smooth: true,
       },
     })
-
     const anchorLinks = document.querySelectorAll(
       'a[href^=\\#]:not([href$=\\#])'
     );
-
+  
     anchorLinks.forEach((anchorLink) => {
       let hashval = anchorLink.getAttribute('href');
       let target = document.querySelector(hashval);
@@ -54,6 +54,9 @@ function HomePage() {
   const [hue, setHue] = useState(0)
   const color = `hsl(${hue +700 % 360}deg 60% 50%)`
 
+  const [date, setDate] = useState("2022-12-02")
+  const months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
+
   // const location = {
   //   address: '1600 Amphitheatre Parkway, Mountain View, california.',
   //   lat: 37.42216,
@@ -63,8 +66,8 @@ function HomePage() {
 
   return (
     <div className="homepage" data-scroll-container>
-    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="1">
-     <div className="header" id="home" data-scroll data-scroll-speed="1">
+    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="2">
+     <div className="header" id="home" data-scroll data-scroll-speed="5">
     <div className="grid"></div>
     <div className="lines"></div>
     <h1>
@@ -86,11 +89,31 @@ function HomePage() {
     <div className="container" id="aktuelles" >
     <div className="text" data-scroll data-scroll-speed="3.5">
     <h1>Aktuelles</h1>
-  
-    <h3>Hauptversammlung</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
-    <h3>Wanderung</h3>
-    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. </p>
+
+    <div className="kalender">
+    <div className="date">
+    <h5 className="month">{ months[Number(date.slice(5,7))-1] }</h5>
+    <h3 className="day">{date.slice(8,9) == 0? date.slice(9,10): date.sclice(8,10)}</h3>
+    </div>
+    <div className="event align-center">
+    <h3>Weihnachtsfeier 2022</h3>
+    <p>Der TC am Langen Steg lädt ein zur Weihnachtsfeier am Fr. 2.12. um 19:00 Uhr im Tennisheim. Für Glühwein, Tee sowie Plätzchen ist gesorgt.</p>
+    </div>
+    </div>
+
+    <div className="kalender">
+    <div className="date">
+    <h5 className="month">Jan</h5>
+    <h3 className="day">14</h3>
+    </div>
+    <div className="event align-center">
+    <h3>Frühshoppen</h3>
+    <p>Der nächste Früschoppen findet am wieder am 14.01.2023 im Vereinsheim statt. Wir freuen uns über euer Erscheinen</p>
+    </div>
+    </div>
+ 
+ <h6 >Bei kommenden Terminen halten wir euch hier am Laufenden...</h6>
+   
     </div>
     <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed="1.5">
     </div>
@@ -225,7 +248,8 @@ function HomePage() {
     </div>
 
     
-      <div className="container">
+    <div className="last-item-with-footer" >
+    <div className="container" id="vereinsleitung">
     <div className="text" data-scroll  data-scroll-speed="2.5">
     <h1>Vereinsleitung</h1>
     <h3>Vorstand</h3>
@@ -235,7 +259,7 @@ function HomePage() {
     <h4>1. Vorsitzender</h4>
       <p>Gerd Neumann</p>
       <p>Ziegelweg 6b</p>  
-      <p>92615 Weiden</p> 
+      <p>92637 Weiden</p> 
       <p>Telefon: 0160 91960835</p>
       <p>E-Mail: neumi.regis@web.de</p>
     </div>
@@ -243,7 +267,7 @@ function HomePage() {
     <h4>2. Vorsitzender</h4>
       <p>Manfred Kammerer</p>
       <p>Luitpoldstr. 20 a</p>  
-      <p>92615 Weiden</p> 
+      <p>92637 Weiden</p> 
       <p>Telefon: 0961/44701</p>
       <p>E-Mail: manfred.kammerer4747@web.de</p>
     </div>
@@ -264,12 +288,60 @@ function HomePage() {
       <p>E-Mail: WeigertR@t-online.de</p>
     </div>
     </div>
+
+    <h3>Vereinsausschuss</h3>
+    <div className="vereinsleitung">
+    
+    <div className="person">
+    <h4>Sport- & Jugendwart</h4>
+      <p>Daniel Strobl</p>
+      <p>Thomastr. 8</p>  
+      <p>92665 Altenstadt</p> 
+      <p>Telefon: 09602/615656</p>
+    
+    </div>
+    <div className="person">
+    <h4>Vergnügungswärtin</h4>
+      <p>Claudia Bögl</p>
+      <p>Ziegelweg 6b</p>  
+      <p>92637 Weiden</p> 
+      <p>Telefon: 0961/42061</p>
+      <p>E-Mail: C.Boegl@t-online.de</p>
+    </div>
+    <div className="person">
+    <h4>Technische Leitung</h4>
+      <p>Marc Badhorn</p>
+      <p>Landgerichtsstraße 20</p>  
+      <p>92637 Weiden</p> 
+      <p>Telefon: 0961/3988550</p>
+      <p>E-Mail: mbadhorn@weiden.de</p>
+    </div>
+    <div className="person">
+    <h4>Technische Leitung</h4>
+      <p>Philipp Neubauer</p>
+      <p>Sebastianstraße 30</p>  
+      <p>92637 Weiden</p> 
+      <p>Telefon: 0151 46429978</p>
+      
+    </div>
+    </div>
     
     
     </div>
     <div className="image" style={{ backgroundImage: `url(${sixth})` }} data-scroll  data-scroll-speed="1">
     </div>
+
+   
     </div>
+
+    <a className="footer"  href="#home">
+    <img src={upArrows}></img>
+    </a>
+    
+    </div>
+
+
+   
 
 
     </div>
