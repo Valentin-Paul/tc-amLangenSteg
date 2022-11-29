@@ -85,6 +85,7 @@ function Navbar() {
           </a>
           <ul className="dropdown-menu">
           <li><a className="dropdown-item" href="#kontakt">Kontakt</a></li>
+          <li><a className="dropdown-item" href="#vereinsleitung">Vereinsleitung</a></li>
             <li><a className="dropdown-item" href="#">Impressum</a></li>
             <li><a className="dropdown-item" href="#">Login</a></li>
         
