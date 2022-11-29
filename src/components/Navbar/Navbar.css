@@ -1,5 +1,5 @@
 .navbar a {
-    font-size: 2.4rem;
+    font-size: 2rem;
     color: black;
     font-weight: 300;
     font-family: 'SF Sports Night', sans-serif;
@@ -77,4 +77,10 @@
 
 .dropdown-menu.show{
     margin-left: -9vw;
+  }
+
+  @media (min-width: 769px) {
+    .navbar a {
+        font-size: 2.4rem;
+    }
   }
