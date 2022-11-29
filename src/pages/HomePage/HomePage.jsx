@@ -17,7 +17,7 @@ function HomePage() {
   useEffect(()=>{
 
     const scroll = new LocomotiveScroll({
-      el: document.querySelector("[data-scroll-container"),
+      el: document.querySelector("[data-scroll-container]"),
       smooth: true,
       mobile: {
         breakpoint: 0,
@@ -108,11 +108,11 @@ function HomePage() {
     </div>
     <div className="event align-center">
     <h3>Frühshoppen</h3>
-    <p>Der nächste Früschoppen findet am wieder am 14.01.2023 im Vereinsheim statt. Wir freuen uns über euer Erscheinen</p>
+    <p>Der nächste Frühschoppen findet am wieder am 14.01.2023 im Vereinsheim statt. Wir freuen uns über euer Erscheinen</p>
     </div>
     </div>
  
- <h6 >Bei kommenden Terminen halten wir euch hier am Laufenden...</h6>
+ <h6 >Bei kommenden Terminen halten wir euch hier auf dem Laufenden...</h6>
    
     </div>
     <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed="1.5">
@@ -131,15 +131,15 @@ function HomePage() {
 <div className="team">
 <h3>Mädchen 15 Nordliga 2 Gr. 446</h3>
     <p>Trainingszeiten: Dienstag von 17:00 – 18:00 Uhr</p>
-    <p> Mannschaftsspiele: jeweils am Freitag ab 16:00 Uhr</p>
-    <p> Mannschaftsführer: Leni Strauß   Tel. 0961 / 3989899</p>
+    <p> Mannschaftsspiele: jeweils Freitags ab 16:00 Uhr</p>
+    <p> Mannschaftsführerin: Leni Strauß   Tel. 0961 / 3989899</p>
 </div>
     
 <div className="team">
 <h3>Damen Nordliga 4 (4er) Gr. 130</h3>
     <p>Trainingszeiten:
         Mittwoch von 15:30 – 17:30 Uhr auf zwei Plätzen</p>
-        <p> Mannschaftsspiele: jeweils am Sonntag um 10:00 Uhr</p>
+        <p> Mannschaftsspiele: jeweils Sonntags um 10:00 Uhr</p>
         <p> Mannschaftsführerin: Claudia Bögl - Handy:  0171 3785160 </p>
 
 </div>
@@ -152,7 +152,7 @@ function HomePage() {
     <div className="container" id="mitgliedschaft">
     <div className="text mitgliedschaft" data-scroll data-scroll-speed="2.5">
     <h1>Mitgliedschaft</h1>
-    <p>Wir freuen uns, dass Sie sich für den TC Am Langen Steg interessieren! Möchten Sie selbst Mitglied werden? Im Folgenden finden Sie die aktuellen Beiträge für Mitglieder sowie einen Aufnahmeantrag zum downloaden und ausdrucken.</p>
+    <p>Wir freuen uns, dass Sie sich für den TC Am Langen Steg interessieren! Möchten Sie selbst Mitglied werden? Hier finden Sie die aktuellen Beiträge für Mitglieder sowie einen Aufnahmeantrag zum downloaden und ausdrucken.</p>
     <h3>Beiträge</h3>
     <table className="beiträge">
       <tr>
