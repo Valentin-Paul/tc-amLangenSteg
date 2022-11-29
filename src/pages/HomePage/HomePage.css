@@ -41,7 +41,7 @@
       rgba(255, 255, 255, 0) 8px
     );
       box-shadow: 0 0 1em rgba(#59c1fe);
-      transform: translateY(-1em);
+      transform: translateY(-1.4em);
       left: 0;
     }
   
@@ -88,7 +88,7 @@
     font-family: 'Mr Dafoe';
     margin: 0;
     font-size: 4em;
-    margin-top: -0.9em;
+    margin-top: -0.7em;
     color: white;
     text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
     transform: rotate(-7deg);
@@ -103,12 +103,89 @@
       margin-top: -4vh;
   }
 
+.kalender{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.event{
+  display: flex;
+  flex-direction: column;
+  width: 42vw;
+}
+
+.date{
+  display: flex;
+  flex-direction: column;
+ text-align: center;
+  border: solid black 1px;
+  border-radius: 25px;
+  overflow: hidden;
+ width: 4.5rem;
+ height: 4.5rem
+}
+
+.date .month{
+  background-color: lightgray;
+}
+
+.date .day{
+  margin: 0;
+}
+
+#aktuelles h6{
+  text-align: center;
+  margin-top: 2rem;
+}
+
+#vereinsleitung h3{
+  padding-bottom: 1rem;
+  font-weight: 800;
+}
+
+
+
+.footer {
+  display: block;
+  position: fixed;
+  height: 6vh;
+  width: 100%;
+  margin-bottom: 10vh;
+  text-align: center;
+  align-items: center;
+  background-color: lightgrey;
+ bottom: 0;
+ left: 0;
+}
+
+.footer img{
+max-height: 6vh;
+}
+
+#mitgliedschaft .text{
+  margin-top: -2vh;
+}
+
+#kontakt .text{
+  margin-top: -4vh;
+}
+
+#vereinsleitung .text{
+  margin-top: -8vh;
+  margin-bottom: 12vh;
+}
+
+
+
 
   @media (min-width: 769px) {
  
     .homepage{
-        margin: 5vh 5vw;
+        margin: 5vh 5vw 0vh 5vw;
     }
+
     
           .second-image{
               height: 80vh;
@@ -127,6 +204,8 @@
               bottom: -400vh
           }
           
+
+
           .container{
               display: flex;
               flex-direction: row;
@@ -136,7 +215,9 @@
               max-width: 100% !important;
           }
 
-         
+          #home{
+            padding-top: 30vh;
+           }
           
           .container h1{
               margin-top: 6vh;
@@ -160,6 +241,7 @@
         }
         
         .text{
+            padding-top: 4vh;
             width: 50vw;
             text-align: justify;
         }
@@ -208,12 +290,13 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            
         }
         
         .vereinsleitung .person{
             width: 50%;
+          
         }
+
         
         .person p{
         margin: 0.5rem;
@@ -222,6 +305,12 @@
         .person h4{
             margin-bottom: 0.8rem;
         }
+
+        .last-item-with-footer{
+          display: flex;
+          flex-direction: column;
+          height: 100%;
+        }
     
     }
 
@@ -229,8 +318,12 @@
 
 @media (max-width: 768px) {
 
+  .App{
+    margin-bottom: 0;
+  }
+
   .header{
-      margin-top: 10vh;
+      margin-top: 20vh;
       transform: rotate(-90deg);
       width: 100vw;
       position: fixed;
@@ -287,8 +380,13 @@
       flex-direction: column;
     }
 
+    #vereinsleitung{
+      display: flex;
+      flex-direction: column;
+    }
+
    #aktuelles{
-      margin-top: -8vh;
+      margin-top: -10vh;
     }
 
     .image{
@@ -299,7 +397,36 @@
       background-size: cover;
     }
 
+   
+
     .text{
       padding: 0rem 1rem 2rem 1rem;
     }
+
+    .kalender .event{
+      width: 65vw;
+      text-align: justify;
+    }
+
+    #vereinsleitung h3{
+      padding-top: 1rem;
+    }
+
+    #vereinsleitung h4{
+      padding-top: 0.5rem;
+    }
+
+    #vereinsleitung .text{
+      margin-bottom: -15vh;
+    }
+
+    #vereinsleitung .image{
+      height: 30vh;
+    }
+
+    .footer{
+      height: 6vh;
+      margin-bottom: 3vh;
+    }
+  
 }
