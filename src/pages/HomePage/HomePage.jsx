@@ -66,9 +66,9 @@ function HomePage() {
 
   return (
     <div className="homepage" data-scroll-container>
-    <div data-scroll data-scroll-speed="1">
-    <div className="court" style={{ backgroundImage: `url(${court})` }} >
-     <div className="header" id="home" data-scroll data-scroll-speed="5">
+    
+    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="1">
+     <div className="header" id="home" data-scroll data-scroll-speed="4">
     <div className="grid"></div>
     <div className="lines"></div>
     <h1>
@@ -82,7 +82,7 @@ function HomePage() {
     
     </div>
     </div>
-    </div>
+    
     
  
 
