@@ -66,7 +66,8 @@ function HomePage() {
 
   return (
     <div className="homepage" data-scroll-container>
-    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="2">
+    <div data-scroll data-scroll-speed="1">
+    <div className="court" style={{ backgroundImage: `url(${court})` }} >
      <div className="header" id="home" data-scroll data-scroll-speed="5">
     <div className="grid"></div>
     <div className="lines"></div>
@@ -81,13 +82,15 @@ function HomePage() {
     
     </div>
     </div>
+    </div>
+    
  
 
 
     {/* // AKTUELLES */}
 
     <div className="container" id="aktuelles" >
-    <div className="text" data-scroll data-scroll-speed="3.5">
+    <div className="text" data-scroll data-scroll-speed="2">
     <h1>Aktuelles</h1>
 
     <div className="kalender">
@@ -115,7 +118,7 @@ function HomePage() {
  <h6 >Bei kommenden Terminen halten wir euch hier auf dem Laufenden...</h6>
    
     </div>
-    <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed="1.5">
+    <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed="1">
     </div>
     </div>
 
@@ -125,7 +128,7 @@ function HomePage() {
 
     <div className="container" id="mannschaften">
     <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed="1"></div>
-    <div className="text" data-scroll data-scroll-speed="3.5">
+    <div className="text" data-scroll data-scroll-speed="2">
     <h1 >Mannschaften</h1>
 
 <div className="team">
@@ -150,7 +153,7 @@ function HomePage() {
    
 
     <div className="container" id="mitgliedschaft">
-    <div className="text mitgliedschaft" data-scroll data-scroll-speed="2.5">
+    <div className="text mitgliedschaft" data-scroll data-scroll-speed="2">
     <h1>Mitgliedschaft</h1>
     <p>Wir freuen uns, dass Sie sich für den TC Am Langen Steg interessieren! Möchten Sie selbst Mitglied werden? Hier finden Sie die aktuellen Beiträge für Mitglieder sowie einen Aufnahmeantrag zum downloaden und ausdrucken.</p>
     <h3>Beiträge</h3>
@@ -210,7 +213,7 @@ function HomePage() {
 
     <div className="container" id="kontakt">
     <div className="image" style={{ backgroundImage: `url(${fifth})` }} data-scroll  data-scroll-speed="1"></div>
-    <div className="text kontakt" data-scroll  data-scroll-speed="2.5">
+    <div className="text kontakt" data-scroll  data-scroll-speed="2">
     <h1>Kontakt</h1>
     <h4>Solltest du Fragen, Anliegen oder Kritik haben - Schreibe uns einfach eine Nachricht oder rufe an! </h4>
     <div className="adressen">
@@ -250,7 +253,7 @@ function HomePage() {
     
     <div className="last-item-with-footer" >
     <div className="container" id="vereinsleitung">
-    <div className="text" data-scroll  data-scroll-speed="2.5">
+    <div className="text" data-scroll  data-scroll-speed="2">
     <h1>Vereinsleitung</h1>
     <h3>Vorstand</h3>
     <div className="vereinsleitung">
