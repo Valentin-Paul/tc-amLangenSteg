@@ -44,6 +44,7 @@
       transform: translateY(-1.4em);
       left: 0;
     }
+    
   
   h1 {
     position: relative;
@@ -70,8 +71,9 @@
     
     .span-first {
       display: block;
-      text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 5em #165ff3;
-      -webkit-text-stroke: 0.06em #00000082;
+      text-shadow:  0 0 0.1em #8ba2d0, 0 0 0.2em black;
+      -webkit-text-stroke: 0.065em #00000082;
+      /* text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black,  0 0 5em #165ff3; */
     }
     
     span:last-child {
