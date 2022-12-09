@@ -203,7 +203,7 @@ function HomePage() {
     </table>
     <h3>Antrag</h3>
     <p>Bitte drucken Sie den Aufnahmeantrag aus und reichen diesen in der Geschäftsstelle des TC Am Langen Steg ein.</p>
-    <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2020/01/Mitgliedsantrag-TC-Am-Langen-Steg.pdf">Link zum PDF Formular</a>
+    <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2020/01/Mitgliedsantrag-TC-Am-Langen-Steg.pdf" target="_blank">Link zum PDF Formular</a>
     </div>
 
     <div className="image" style={{ backgroundImage: `url(${second})` }} data-scroll  data-scroll-speed="1">
@@ -246,7 +246,7 @@ function HomePage() {
 
     <h3>Satzung</h3>
     <p>Hier finden Sie die Satzung des TC Am Langen Steg in Weiden i. d. OPf. (Stand 30.06.2012)</p>
-    <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2014/12/Satzung-TC-Am-Langen-Steg.pdf" >Satzung</a>
+    <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2014/12/Satzung-TC-Am-Langen-Steg.pdf" target="_blank">Satzung</a>
  </div>
     </div>
 
