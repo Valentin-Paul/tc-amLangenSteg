@@ -1,6 +1,6 @@
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-import { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../context/auth.context";
 import LocomotiveScroll from "locomotive-scroll";
 import menuIcon from "../../pages/images/menu.png"
@@ -9,11 +9,6 @@ function Navbar() {
   // Subscribe to the AuthContext to gain access to
   // the values from AuthContext.Provider's `value` prop
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
-
-
-  const colapseNavbar = ()=>{
-    document.onclick()
-  }
 
 
   useEffect(()=>{
@@ -50,7 +45,7 @@ function Navbar() {
       let hashval = anchorLink.getAttribute('href');
       let target = document.querySelector(hashval);
       let coordinates = document.getElementById(target.id).getBoundingClientRect().top - 100
-      console.log(coordinates)
+     
   
       anchorLink.addEventListener('click', (e) => {
         e.preventDefault();
@@ -68,6 +63,9 @@ function Navbar() {
       });
 
     });
+
+
+ 
    
   
   })
@@ -77,7 +75,7 @@ function Navbar() {
   return (
 
 
-<nav className="navbar navbar-expand-lg ">
+<nav className="navbar navbar-expand-lg " >
   <div className="space-between container-fluid">
     <div className="home-button">
 
@@ -90,16 +88,16 @@ function Navbar() {
    <button  style={{ backgroundImage: `url(${menuIcon})`}} className="navbar-toggler custom-toggler navbar-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span  className="navbar-toggler-icon"></span>
     </button>
-    <div className="collapse navbar-collapse " id="navbarSupportedContent" >
+    <div className="collapse navbar-collapse"  id="navbarSupportedContent" >
       <ul className="navbar-nav space-evenly">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#aktuelles" data-scroll-to>Aktuelles</a>
+          <a className="nav-link active dropdown-item" aria-current="page" href="#aktuelles" data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" data-scroll-to>Aktuelles</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#mannschaften" data-scroll-to>Mannschaften</a>
+          <a className="nav-link active dropdown-item" aria-current="page" href="#mannschaften" data-bs-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation" data-scroll-to>Mannschaften</a>
         </li>
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#mitgliedschaft" data-scroll-to>Mitgliedschaft</a>
+          <a className="nav-link active dropdown-item" aria-current="page" href="#mitgliedschaft" data-scroll-to>Mitgliedschaft</a>
         </li>
        
         <li className="nav-item dropdown">

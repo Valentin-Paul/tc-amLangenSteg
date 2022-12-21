@@ -14,20 +14,12 @@ import { Map, Marker,  ZoomControl } from "pigeon-maps"
 
 function HomePage() {
 
-  let imageSpeed;
-  let textSpeed;
+  const[imageSpeed, setImageSpeed] = useState(null)
+  const [textSpeed, setTextSpeed] = useState(null)
+
+
 
   useEffect(()=>{
-
-    let screenWidth = window.innerWidth
-    if (screenWidth < 687){
-      imageSpeed = "1"
-      textSpeed = "1"
-    }
-    else{
-      imageSpeed = "1"
-      textSpeed = "3"
-    }
 
     const scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
@@ -70,11 +62,23 @@ function HomePage() {
         // });
   
         // e.target.classList.add('active');
-  
+        console.log(window.innerWidth)
         scroll.scrollTo(coordinates);
       });
     });
-  })
+   
+
+    let screenWidth = window.innerWidth
+    if (screenWidth < 687){
+      setImageSpeed("1")
+      setTextSpeed("1")
+    }
+    else{
+      setImageSpeed("1")
+      setTextSpeed("3")
+    }
+  
+  }, [])
 
   const [hue, setHue] = useState(0)
   const color = `hsl(${hue +700 % 360}deg 60% 50%)`
