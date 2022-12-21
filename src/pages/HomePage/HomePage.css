@@ -292,13 +292,10 @@ max-height: 6vh;
         .vereinsleitung{
             display: flex;
             flex-direction: row;
-            flex-wrap: wrap;
+            /* flex-wrap: wrap; */
         }
-        
-        .vereinsleitung .person{
-            width: 50%;
-          
-        }
+
+ 
 
         
         .person p{
@@ -380,10 +377,14 @@ max-height: 6vh;
     }
 
     .container{
-      padding-top: 5vh;
+      margin-top: 7vh;
       display: flex;
       flex-direction: column-reverse;
       --bs-gutter-x: 0rem;
+    }
+
+    container h1{
+   
     }
 
     .container:nth-of-type(2n){
@@ -391,12 +392,13 @@ max-height: 6vh;
     }
 
     #vereinsleitung{
+      margin-top: 12vh;
       display: flex;
       flex-direction: column;
     }
 
-   #aktuelles{
-      margin-top: -5vh;
+   #kontakt{
+      margin-top: 10vh;
     }
 
     .image{
@@ -418,6 +420,21 @@ max-height: 6vh;
       text-align: justify;
     }
 
+    .vereinsleitung-liste{
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .vereinsleitung-liste .person{
+        max-width: 45%;
+    }
+
+    .vereinsleitung-liste .person p{
+      font-size: 1rem;
+    }
+
     #vereinsleitung h3{
       padding-top: 1rem;
     }
@@ -427,7 +444,7 @@ max-height: 6vh;
     }
 
     #vereinsleitung .text{
-      margin-bottom: -15vh;
+      margin-bottom: 0vh;
     }
 
     #vereinsleitung .image{
@@ -470,6 +487,14 @@ max-height: 6vh;
 
     .team  p{
       font-size: 1.2rem;
+    }
+
+    .beiträge{
+     margin-left: 10vw;
+    }
+
+    .beiträge td:first-child{
+      padding-right: 5vw;
     }
 
     /* .buffer{
