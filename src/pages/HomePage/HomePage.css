@@ -179,6 +179,20 @@ max-height: 6vh;
   margin-bottom: 12vh;
 }
 
+.vereinsleitung-liste{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.vereinsleitung-liste .person{
+    width: 25vw;
+}
+
+.vereinsleitung-liste .person h4{
+  padding-top: 2vh;
+}
 
 
 
@@ -420,16 +434,7 @@ max-height: 6vh;
       text-align: justify;
     }
 
-    .vereinsleitung-liste{
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-    
-    .vereinsleitung-liste .person{
-        max-width: 45%;
-    }
+
 
     .vereinsleitung-liste .person p{
       font-size: 1rem;
@@ -496,6 +501,14 @@ max-height: 6vh;
     .beiträge td:first-child{
       padding-right: 5vw;
     }
+
+    .vereinsleitung-liste .person{
+      width: 45vw;
+  }
+
+  #vereinsleitung{
+    margin-bottom: -14vh;
+  }
 
     /* .buffer{
       padding-top: 15vh;
