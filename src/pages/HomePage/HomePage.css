@@ -330,7 +330,7 @@ max-height: 6vh;
   }
 
   .header{
-      padding-top: 25vh;
+      padding-top: 22vh;
       /* transform: rotate(-90deg); */
       width: 100vw;
       
@@ -351,7 +351,7 @@ max-height: 6vh;
   }
 
   .header h2{
-      font-size: 3em;
+      font-size: 5vh;
        margin-top: -0.6em;
   }
 
