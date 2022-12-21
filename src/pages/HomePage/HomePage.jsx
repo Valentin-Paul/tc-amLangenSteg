@@ -14,7 +14,20 @@ import { Map, Marker,  ZoomControl } from "pigeon-maps"
 
 function HomePage() {
 
+  let imageSpeed;
+  let textSpeed;
+
   useEffect(()=>{
+
+    let screenWidth = window.innerWidth
+    if (screenWidth < 687){
+      imageSpeed = "1"
+      textSpeed = "1"
+    }
+    else{
+      imageSpeed = "1"
+      textSpeed = "3"
+    }
 
     const scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
@@ -73,7 +86,7 @@ function HomePage() {
   return (
     <div className="homepage" data-scroll-container>
     
-    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed="1">
+    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed={imageSpeed}>
      <div className="header" id="home" data-scroll data-scroll-speed="4">
     <div className="grid"></div>
     <div className="lines"></div>
@@ -96,7 +109,7 @@ function HomePage() {
     {/* // AKTUELLES */}
 
     <div className="container" id="aktuelles" >
-    <div className="text" data-scroll data-scroll-speed="2">
+    <div className="text" data-scroll data-scroll-speed={textSpeed}>
     <h1>Aktuelles</h1>
 
     <div className="kalender">
@@ -124,17 +137,17 @@ function HomePage() {
  <h6 >Bei kommenden Terminen halten wir euch hier auf dem Laufenden...</h6>
    
     </div>
-    <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed="1">
+    <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed={imageSpeed}>
     </div>
     </div>
 
 
 
 {/* // MANNSCHAFTEN */}
-<div className="buffer">
+
 <div className="container" id="mannschaften">
-    <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed="1"></div>
-    <div className="text" data-scroll data-scroll-speed="2">
+    <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed={imageSpeed}></div>
+    <div className="text" data-scroll data-scroll-speed={textSpeed}>
     <h1 >Mannschaften</h1>
 
 <div className="team">
@@ -153,15 +166,16 @@ function HomePage() {
 </div>
     </div>
     </div>
-</div>
+
    
 
   
     <div className="container" id="mitgliedschaft">
-    <div className="text mitgliedschaft" data-scroll data-scroll-speed="2">
+    <div className="text mitgliedschaft" data-scroll data-scroll-speed={textSpeed}>
     <h1>Mitgliedschaft</h1>
     <p>Wir freuen uns, dass Sie sich für den TC Am Langen Steg interessieren! Möchten Sie selbst Mitglied werden? Hier finden Sie die aktuellen Beiträge für Mitglieder sowie einen Aufnahmeantrag zum downloaden und ausdrucken.</p>
     <h3>Beiträge</h3>
+    
     <table className="beiträge">
       <tr>
         <td>Einzelmitglied</td>
@@ -211,14 +225,14 @@ function HomePage() {
     <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2020/01/Mitgliedsantrag-TC-Am-Langen-Steg.pdf" target="_blank">Link zum PDF Formular</a>
     </div>
 
-    <div className="image" style={{ backgroundImage: `url(${second})` }} data-scroll  data-scroll-speed="1">
+    <div className="image" style={{ backgroundImage: `url(${second})` }} data-scroll  data-scroll-speed={imageSpeed}>
     </div>
     </div>
 
 
     <div className="container" id="kontakt">
-    <div className="image" style={{ backgroundImage: `url(${fifth})` }} data-scroll  data-scroll-speed="1"></div>
-    <div className="text kontakt" data-scroll  data-scroll-speed="2">
+    <div className="image" style={{ backgroundImage: `url(${fifth})` }} data-scroll  data-scroll-speed={imageSpeed}></div>
+    <div className="text kontakt" data-scroll  data-scroll-speed={textSpeed}>
     <h1>Kontakt</h1>
     <h4>Solltest du Fragen, Anliegen oder Kritik haben - Schreibe uns einfach eine Nachricht oder rufe an! </h4>
     <div className="telefon-mail">
@@ -263,10 +277,10 @@ function HomePage() {
     
     <div className="last-item-with-footer" >
     <div className="container" id="vereinsleitung">
-    <div className="text" data-scroll  data-scroll-speed="2">
+    <div className="text" data-scroll  data-scroll-speed={textSpeed}>
     <h1>Vereinsleitung</h1>
     <h3>Vorstand</h3>
-    <div className="vereinsleitung">
+    <div className="vereinsleitung-liste">
     
     <div className="person">
     <h4>1. Vorsitzender</h4>
@@ -303,7 +317,7 @@ function HomePage() {
     </div>
 
     <h3>Vereinsausschuss</h3>
-    <div className="vereinsleitung">
+    <div className="vereinsleitung-liste">
     
     <div className="person">
     <h4>Sport- & Jugendwart</h4>
@@ -341,7 +355,7 @@ function HomePage() {
     
     
     </div>
-    <div className="image" style={{ backgroundImage: `url(${sixth})` }} data-scroll  data-scroll-speed="1">
+    <div className="image" style={{ backgroundImage: `url(${sixth})` }} data-scroll  data-scroll-speed={imageSpeed}>
     </div>
 
    

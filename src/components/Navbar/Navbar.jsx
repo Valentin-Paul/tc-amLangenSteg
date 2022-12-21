@@ -11,6 +11,10 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
 
+  const colapseNavbar = ()=>{
+    document.onclick()
+  }
+
 
   useEffect(()=>{
 
