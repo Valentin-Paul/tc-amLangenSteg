@@ -20,7 +20,7 @@ function Navbar() {
       smartphone: {
         offset: ["50%", "50"],
         breakpoint: 0,
-        lerp: 0.6,
+        lerp: 1,
         // getDirection: true,
         smooth: true,
         // smoothMobile: true,
@@ -28,8 +28,7 @@ function Navbar() {
         resetNativeScroll: true
       },
       tablet: {
-        offset: ["50%", "50%"],
-        lerp: 0.6,
+        lerp: 1,
        breakpoint: 0,
       // getDirection: true,
         smooth: true,

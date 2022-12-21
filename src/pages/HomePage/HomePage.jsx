@@ -27,7 +27,7 @@ function HomePage() {
         smoothMobile: true,
         scrollFromAnywhere: true,
         resetNativeScroll: true,
-        lerp: 1,
+        // lerp: 1,
       },
       tablet: {
       //  breakpoint: 0,
@@ -36,7 +36,7 @@ function HomePage() {
         smoothMobile: true,
         scrollFromAnywhere: true,
         resetNativeScroll: true,
-        lerp: 1,
+        // lerp: 1,
       }
     })
     const anchorLinks = document.querySelectorAll(
@@ -46,6 +46,7 @@ function HomePage() {
     anchorLinks.forEach((anchorLink) => {
       let hashval = anchorLink.getAttribute('href');
       let target = document.querySelector(hashval);
+      let coordinates = document.getElementById(target.id).getBoundingClientRect().top - 100
   
       anchorLink.addEventListener('click', (e) => {
         e.preventDefault();
@@ -57,7 +58,7 @@ function HomePage() {
   
         // e.target.classList.add('active');
   
-        // scroll.scrollTo(target);
+        scroll.scrollTo(coordinates);
       });
     });
   })
