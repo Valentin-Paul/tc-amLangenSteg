@@ -325,11 +325,15 @@ max-height: 6vh;
     margin-bottom: 0;
   }
 
+  p{
+    font-size: 1.2rem;
+  }
+
   .header{
-      margin-top: 12vh;
-      transform: rotate(-90deg);
+      padding-top: 25vh;
+      /* transform: rotate(-90deg); */
       width: 100vw;
-      position: fixed;
+      
   }
 
   .header h1{
@@ -371,11 +375,12 @@ max-height: 6vh;
     }
 
     .court {
-      height: 60vh;
-      transform: rotate(90deg) ;
+      height: 40vh;
+      /* transform: rotate(90deg) ; */
     }
 
     .container{
+      padding-top: 5vh;
       display: flex;
       flex-direction: column-reverse;
       --bs-gutter-x: 0rem;
@@ -391,7 +396,7 @@ max-height: 6vh;
     }
 
    #aktuelles{
-      margin-top: 0vh;
+      margin-top: -5vh;
     }
 
     .image{
@@ -433,5 +438,42 @@ max-height: 6vh;
       height: 6vh;
       margin-bottom: 3vh;
     }
+
+    /* #aktuelles #vereinsleitung{
+      margin: 0;
+      padding: 0;
+    } */
+
+    .kontakt p{
+      font-size: 1.2rem;
+      margin-bottom: 0;
+    }
   
+    .adressen{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 3vh;
+    }
+
+    .telefon-mail{
+      margin: 4vh 0vw;
+    }
+
+    .satzung{
+      margin-top: 3vh;
+    }
+
+    .team{
+      margin-top: 4vh;
+    }
+
+    .team  p{
+      font-size: 1.2rem;
+    }
+
+    /* .buffer{
+      padding-top: 15vh;
+    } */
+
 }
