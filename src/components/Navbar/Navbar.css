@@ -57,11 +57,7 @@
     margin-left: 3vw;
 }
 
-.dropdown-menu.show{
-    text-align: center;
-    padding-left: 8vw;
-    border: none !important;
-}
+
 
 .menu-icon button{
     align-items: center;
@@ -92,3 +88,12 @@
         font-size: 2.4rem;
     }
   }
+
+  @media (max-width: 769px) {
+    .dropdown-menu.show{
+        text-align: center;
+        padding-left: 8vw;
+        border: none !important;
+    }
+  }
+
