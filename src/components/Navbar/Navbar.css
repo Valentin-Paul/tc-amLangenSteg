@@ -53,6 +53,14 @@
 
 .menu-icon{
     text-align: center;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.dropdown-menu.show{
+    text-align: center;
+    padding-left: 8vw;
+    border: none !important;
 }
 
 .menu-icon button{
