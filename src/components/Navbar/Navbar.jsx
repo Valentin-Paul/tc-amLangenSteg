@@ -17,12 +17,26 @@ function Navbar() {
     let scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      mobile: {
+      smartphone: {
+        offset: ["50%", "50"],
+        breakpoint: 0,
+        lerp: 0.6,
+        // getDirection: true,
         smooth: true,
+        // smoothMobile: true,
+        scrollFromAnywhere: true,
+        resetNativeScroll: true
       },
       tablet: {
+        offset: ["50%", "50%"],
+        lerp: 0.6,
+       breakpoint: 0,
+      // getDirection: true,
         smooth: true,
-      },
+      //   smoothMobile: true,
+        scrollFromAnywhere: true,
+        resetNativeScroll: true
+      }
     })
 
     const anchorLinks = document.querySelectorAll(
@@ -32,20 +46,26 @@ function Navbar() {
     anchorLinks.forEach((anchorLink) => {
       let hashval = anchorLink.getAttribute('href');
       let target = document.querySelector(hashval);
+      let coordinates = document.getElementById(target.id).getBoundingClientRect().top - 100
+      console.log(coordinates)
   
       anchorLink.addEventListener('click', (e) => {
         e.preventDefault();
         e.stopPropagation();
+
+        // anchorLinks.forEach((anchorLink) => {
+        //   anchorLink.classList.remove('active');
+        // });
   
-        anchorLinks.forEach((anchorLink) => {
-          anchorLink.classList.remove('active');
-        });
-  
-        e.target.classList.add('active');
-  
-        scroll.scrollTo(target);
+        // e.target.classList.add('active');
+
+      //  var coordinates = target.getBoundingClientRect()
+
+        scroll.scrollTo(coordinates)
       });
+
     });
+   
   
   })
 

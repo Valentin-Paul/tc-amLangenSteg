@@ -19,14 +19,25 @@ function HomePage() {
     const scroll = new LocomotiveScroll({
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      mobile: {
-        breakpoint: 0,
+      resetNativeScroll: true,
+      smartphone: {
+        // breakpoint: 0,
+        getDirection: true,
         smooth: true,
+        smoothMobile: true,
+        scrollFromAnywhere: true,
+        resetNativeScroll: true,
+        lerp: 1,
       },
       tablet: {
-        breakpoint: 0,
+      //  breakpoint: 0,
+      getDirection: true,
         smooth: true,
-      },
+        smoothMobile: true,
+        scrollFromAnywhere: true,
+        resetNativeScroll: true,
+        lerp: 1,
+      }
     })
     const anchorLinks = document.querySelectorAll(
       'a[href^=\\#]:not([href$=\\#])'
@@ -40,13 +51,13 @@ function HomePage() {
         e.preventDefault();
         e.stopPropagation();
   
-        anchorLinks.forEach((anchorLink) => {
-          anchorLink.classList.remove('active');
-        });
+        // anchorLinks.forEach((anchorLink) => {
+        //   anchorLink.classList.remove('active');
+        // });
   
-        e.target.classList.add('active');
+        // e.target.classList.add('active');
   
-        scroll.scrollTo(target);
+        // scroll.scrollTo(target);
       });
     });
   })
@@ -56,12 +67,6 @@ function HomePage() {
 
   const [date, setDate] = useState("2022-12-02")
   const months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
-
-  // const location = {
-  //   address: '1600 Amphitheatre Parkway, Mountain View, california.',
-  //   lat: 37.42216,
-  //   lng: -122.08427,
-  // }
   
 
   return (
@@ -125,8 +130,8 @@ function HomePage() {
 
 
 {/* // MANNSCHAFTEN */}
-
-    <div className="container" id="mannschaften">
+<div className="buffer">
+<div className="container" id="mannschaften">
     <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed="1"></div>
     <div className="text" data-scroll data-scroll-speed="2">
     <h1 >Mannschaften</h1>
@@ -134,24 +139,23 @@ function HomePage() {
 <div className="team">
 <h3>Mädchen 15 Nordliga 2 Gr. 446</h3>
     <p>Trainingszeiten: Dienstag von 17:00 – 18:00 Uhr</p>
-    <p> Mannschaftsspiele: jeweils Freitags ab 16:00 Uhr</p>
+    <p> Mannschaftsspiele: Freitags ab 16:00 Uhr</p>
     <p> Mannschaftsführerin: Leni Strauß   Tel. 0961 / 3989899</p>
 </div>
     
 <div className="team">
 <h3>Damen Nordliga 4 (4er) Gr. 130</h3>
-    <p>Trainingszeiten:
-        Mittwoch von 15:30 – 17:30 Uhr auf zwei Plätzen</p>
-        <p> Mannschaftsspiele: jeweils Sonntags um 10:00 Uhr</p>
+    <p>Trainingszeiten: Mittwoch von 15:30 – 17:30 Uhr</p>
+        <p> Mannschaftsspiele: Sonntags um 10:00 Uhr</p>
         <p> Mannschaftsführerin: Claudia Bögl - Handy:  0171 3785160 </p>
 
 </div>
-    
     </div>
     </div>
-
+</div>
    
 
+  
     <div className="container" id="mitgliedschaft">
     <div className="text mitgliedschaft" data-scroll data-scroll-speed="2">
     <h1>Mitgliedschaft</h1>
@@ -216,6 +220,10 @@ function HomePage() {
     <div className="text kontakt" data-scroll  data-scroll-speed="2">
     <h1>Kontakt</h1>
     <h4>Solltest du Fragen, Anliegen oder Kritik haben - Schreibe uns einfach eine Nachricht oder rufe an! </h4>
+    <div className="telefon-mail">
+    <h5>Telefon: 0961/38824610</h5>
+    <h5>Email: info@tcamlangensteg.de</h5>
+    </div>
     <div className="adressen">
     <div>
     <h3>Adresse</h3>
@@ -241,12 +249,13 @@ function HomePage() {
       < ZoomControl/>
     </Map>
    
-    <p>Telefon: 0961/38824610</p>
-    <p>Email: info@tcamlangensteg.de</p>
-
+  
+    <div className="satzung">
     <h3>Satzung</h3>
     <p>Hier finden Sie die Satzung des TC Am Langen Steg in Weiden i. d. OPf. (Stand 30.06.2012)</p>
     <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2014/12/Satzung-TC-Am-Langen-Steg.pdf" target="_blank">Satzung</a>
+    </div>
+    
  </div>
     </div>
 
