@@ -341,7 +341,7 @@ max-height: 6vh;
   }
 
   .header{
-      padding-top: 22vh;
+      padding-top: 25vh;
       /* transform: rotate(-90deg); */
       width: 100vw;
       
@@ -391,7 +391,6 @@ max-height: 6vh;
     }
 
     .container{
-      margin-top: 7vh;
       display: flex;
       flex-direction: column-reverse;
       --bs-gutter-x: 0rem;
@@ -406,13 +405,13 @@ max-height: 6vh;
     }
 
     #vereinsleitung{
-      margin-top: 12vh;
+      margin-top: 6vh;
       display: flex;
       flex-direction: column;
     }
 
    #kontakt{
-      margin-top: 10vh;
+      margin-top: 5vh;
     }
 
     .image{
