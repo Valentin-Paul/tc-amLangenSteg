@@ -10,6 +10,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 import "../../components/scroll.css"
 import { useEffect,useState } from "react";
 import { Map, Marker,  ZoomControl } from "pigeon-maps"
+import Navbar from "../../components/Navbar/Navbar";
 
 
 function HomePage() {
@@ -18,32 +19,33 @@ function HomePage() {
   const [textSpeed, setTextSpeed] = useState(null)
 
 
-
   useEffect(()=>{
-
+  
     const scroll = new LocomotiveScroll({
+
+    
       el: document.querySelector("[data-scroll-container]"),
       smooth: true,
-      resetNativeScroll: true,
-      smartphone: {
-        // breakpoint: 0,
-        getDirection: true,
-        smooth: true,
-        smoothMobile: true,
-        scrollFromAnywhere: true,
-        resetNativeScroll: true,
-        // lerp: 1,
-      },
-      tablet: {
-      //  breakpoint: 0,
-      getDirection: true,
-        smooth: true,
-        smoothMobile: true,
-        scrollFromAnywhere: true,
-        resetNativeScroll: true,
-        // lerp: 1,
-      }
+      // smartphone: {
+      //   // breakpoint: 0,
+      //   getDirection: true,
+      //   smooth: true,
+      //   smoothMobile: true,
+      //   scrollFromAnywhere: true,
+      //   resetNativeScroll: true,
+      //   // lerp: 1,
+      // },
+      // tablet: {
+      // //  breakpoint: 0,
+      // getDirection: true,
+      //   smooth: true,
+      //   smoothMobile: true,
+      //   scrollFromAnywhere: true,
+      //   resetNativeScroll: true,
+      //   // lerp: 1,
+      // }
     })
+  
     const anchorLinks = document.querySelectorAll(
       'a[href^=\\#]:not([href$=\\#])'
     );
@@ -62,9 +64,9 @@ function HomePage() {
         // });
   
         // e.target.classList.add('active');
-        console.log(window.innerWidth)
         scroll.scrollTo(coordinates);
       });
+    
     });
    
 
@@ -88,7 +90,10 @@ function HomePage() {
   
 
   return (
-    <div className="homepage" data-scroll-container>
+    <>
+      <Navbar/>
+  
+    <div className="homepage disabled-mobile" data-scroll-container>
     
     <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed={imageSpeed}>
      <div className="header" id="home" data-scroll data-scroll-speed="4">
@@ -150,7 +155,7 @@ function HomePage() {
 {/* // MANNSCHAFTEN */}
 
 <div className="container" id="mannschaften">
-    <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed={imageSpeed}></div>
+    <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed={imageSpeed} ></div>
     <div className="text" data-scroll data-scroll-speed={textSpeed}>
     <h1 >Mannschaften</h1>
 
@@ -376,7 +381,7 @@ function HomePage() {
 
 
     </div>
- 
+    </>
   );
 }
 
