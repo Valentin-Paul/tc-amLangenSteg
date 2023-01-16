@@ -1,0 +1,35 @@
+.agb-page{
+    margin: 0vh 5vw 4vh 5vw!important;
+    padding: 3vh 3vw !important;
+    background-color: lightgray;
+}
+
+.agb-header{
+    font-size: 6vh;
+}
+
+.verantwortliche{
+display: flex;
+flex-direction: row;
+justify-content: center; 
+}
+
+.verantwortliche-person{
+    margin: 1vh 3vw;
+}
+
+.agb-page bold{
+    font-weight: 700;
+}
+
+.navbar-agb{
+background-color: white;
+}
+
+.navbar-agb a{
+    font-size: 2.5rem;
+    color: black;
+    font-weight: 300;
+    font-family: 'SF Sports Night', sans-serif;
+    text-decoration: none;
+}
