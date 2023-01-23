@@ -238,7 +238,7 @@ max-height: 6vh;
               top: 200vh;
               bottom: -400vh
           }
-          
+
 
 
           .container{
@@ -376,7 +376,7 @@ max-height: 6vh;
   }
 
   .header h1{
-      font-size: 5vh;
+      font-size: 6.1vh;
       max-width: 100%;
       padding-top: 0;
       padding-left: 0;
@@ -391,7 +391,7 @@ max-height: 6vh;
   }
 
   .header h2{
-      font-size: 3.5vh;
+      font-size: 4.2vh;
        margin-top: -0.6em;
   }
 
