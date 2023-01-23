@@ -363,12 +363,9 @@ max-height: 6vh;
     margin-bottom: 0;
   }
 
-  body{
-  font-size: 90% !important;
-  }
 
   p{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .header{
@@ -388,13 +385,13 @@ max-height: 6vh;
   }
 
   .container h1{
-    font-size: 2.5rem;
+    font-size: 2rem;
     padding-left: 3vw;
     margin-bottom: 3vh;
   }
 
   .header h2{
-      font-size: 4vh;
+      font-size: 3.5vh;
        margin-top: -0.6em;
   }
 
@@ -455,6 +452,10 @@ max-height: 6vh;
       padding: 0rem 1rem 2rem 1rem;
     }
 
+    .text h4{
+      font-size: 1.1rem;
+    }
+
     .kalender{
       margin-bottom: 2vh;
     }
@@ -466,7 +467,7 @@ max-height: 6vh;
     }
 
     .kalender .event p h3{
-      font-size: 1.1 rem;
+      font-size: 1 rem;
     }
 
 
@@ -502,7 +503,7 @@ max-height: 6vh;
     }
 
     .kontakt p{
-      font-size: 1.1rem;
+      font-size: 1rem;
       margin-bottom: 0;
     }
   
@@ -526,7 +527,7 @@ max-height: 6vh;
     }
 
     .team p{
-      font-size: 1.1rem;
+      font-size: 1rem;
     }
 
     .beiträge{
@@ -555,18 +556,19 @@ max-height: 6vh;
 
   .bankverbindung p{
     margin: 0.2rem;
+    font-size: 1rem;
   }
 
   .adressen p{
-   font-size: 1.1rem;  
+   font-size: 1rem;  
       }
  
       .kontakt h4{
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
       .kontakt h5{
-        font-size: 1.1rem;
+        font-size: 1rem;
       }
 
 }
