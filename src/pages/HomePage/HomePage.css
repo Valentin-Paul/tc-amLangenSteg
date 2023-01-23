@@ -194,6 +194,24 @@ max-height: 6vh;
   padding-top: 2vh;
 }
 
+.zusatz{
+        padding-top: 2vh;
+        font-size: 0.8rem;
+    }
+
+.bankverbindung p{
+  margin-top: 1vh;
+       font-size: 1.1rem;
+    }
+
+ .adressen p{
+  margin: 0.4rem   
+    }
+
+  .adressen{
+    margin-bottom: 5vh;
+  }
+
 
 
   @media (min-width: 769px) {
@@ -258,7 +276,7 @@ max-height: 6vh;
         }
         
         .text{
-            padding-top: 4vh;
+            /* padding-top: 4vh; */
             width: 50vw;
             text-align: justify;
         }
@@ -276,13 +294,6 @@ max-height: 6vh;
             padding-bottom: 0.2rem;
         }
         
-        .zusatz{
-            font-size: 0.8rem;
-        }
-        
-        .bankverbindung{
-            font-size: 0.9rem;
-        }
         
         .link{
             color: blue;
@@ -326,6 +337,22 @@ max-height: 6vh;
           height: 100%;
         }
     
+         .bankverbindung{
+          width: 90%;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          font-size: 1rem;
+        }
+
+        .bankverbindungen{
+
+        }
+
+        #mitgliedschaft h3{
+          margin-top: 4vh;
+        }
+
     }
 
 
@@ -359,6 +386,7 @@ max-height: 6vh;
   .container h1{
     font-size: 2.5rem;
     padding-left: 3vw;
+    margin-bottom: 3vh;
   }
 
   .header h2{
@@ -396,10 +424,6 @@ max-height: 6vh;
       --bs-gutter-x: 0rem;
     }
 
-    container h1{
-   
-    }
-
     .container:nth-of-type(2n){
       flex-direction: column;
     }
@@ -423,9 +447,12 @@ max-height: 6vh;
     }
 
    
-
     .text{
       padding: 0rem 1rem 2rem 1rem;
+    }
+
+    .kalender{
+      margin-bottom: 2vh;
     }
 
     .kalender .event{
@@ -434,9 +461,9 @@ max-height: 6vh;
     }
 
 
-
     .vereinsleitung-liste .person p{
       font-size: 1rem;
+      margin: 0.2rem 0rem;
     }
 
     #vereinsleitung h3{
@@ -459,11 +486,11 @@ max-height: 6vh;
       height: 6vh;
       margin-bottom: 3vh;
     }
+ 
 
-    /* #aktuelles #vereinsleitung{
-      margin: 0;
-      padding: 0;
-    } */
+    .mitgliedschaft h3{
+      margin-top: 4vh;
+    }
 
     .kontakt p{
       font-size: 1.2rem;
@@ -486,10 +513,10 @@ max-height: 6vh;
     }
 
     .team{
-      margin-top: 4vh;
+      margin-top: 6vh;
     }
 
-    .team  p{
+    .team p{
       font-size: 1.2rem;
     }
 
@@ -503,14 +530,27 @@ max-height: 6vh;
 
     .vereinsleitung-liste .person{
       width: 45vw;
+      margin-bottom: 2vh;
   }
 
   #vereinsleitung{
     margin-bottom: -14vh;
   }
 
-    /* .buffer{
-      padding-top: 15vh;
-    } */
+  .bankverbindung{
+    width: 90%;
+    flex-direction: column;
+    font-size: 1rem;
+    margin: 3vh 0vw 1vh 0vw;
+  }
+
+  .bankverbindung p{
+    margin: 0.2rem;
+  }
+
+  .adressen p{
+   font-size: 1.1rem;  
+      }
+ 
 
 }

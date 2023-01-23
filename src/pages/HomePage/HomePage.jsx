@@ -13,6 +13,9 @@ import { Map, Marker,  ZoomControl } from "pigeon-maps"
 import Navbar from "../../components/Navbar/Navbar";
 
 
+
+
+
 function HomePage() {
 
   const[imageSpeed, setImageSpeed] = useState(null)
@@ -111,8 +114,6 @@ function HomePage() {
     </div>
     </div>
     
-    
- 
 
 
     {/* // AKTUELLES */}
@@ -161,16 +162,16 @@ function HomePage() {
 
 <div className="team">
 <h3>Mädchen 15 Nordliga 2 Gr. 446</h3>
-    <p>Trainingszeiten: Dienstag von 17:00 – 18:00 Uhr</p>
-    <p> Mannschaftsspiele: Freitags ab 16:00 Uhr</p>
-    <p> Mannschaftsführerin: Leni Strauß   Tel. 0961 / 3989899</p>
+    <p>Trainingszeiten: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
+    <p> Mannschaftsspiele: <br/> Freitags ab 16:00 Uhr</p>
+    <p> Mannschaftsführerin: <br/> Leni Strauß - Tel. 0961 / 3989899</p>
 </div>
     
 <div className="team">
 <h3>Damen Nordliga 4 (4er) Gr. 130</h3>
-    <p>Trainingszeiten: Mittwoch von 15:30 – 17:30 Uhr</p>
-        <p> Mannschaftsspiele: Sonntags um 10:00 Uhr</p>
-        <p> Mannschaftsführerin: Claudia Bögl - Handy:  0171 3785160 </p>
+    <p>Trainingszeiten: <br/> Mittwoch von 15:30 – 17:30 Uhr</p>
+        <p> Mannschaftsspiele: <br/> Sonntags um 10:00 Uhr</p>
+        <p> Mannschaftsführerin: <br/> Claudia Bögl - Tel:  0171 3785160 </p>
 
 </div>
     </div>
@@ -217,7 +218,21 @@ function HomePage() {
     </table>
     <p className="zusatz">*Zusätzlich werden 20€ Arbeitsumlage verreichnet. Die Abgeltung kann auch durch drei Arbeitsstunden auf unserer Anlage erfolgen</p>
     <h3>Bankverbindungen</h3>
-    <table className="bankverbindung">
+    <div className="bankverbindungen">
+    <div className="bankverbindung">
+        <p>Sparkasse Oberpfalz Nord</p>
+        <p>IBAN:  DE37 7535 0000 0011 1149 15</p>
+        <p>BIC: BYLADEM1WEN</p>
+    </div>
+    <div className="bankverbindung">
+        <p>Volksbank Nordoberpfalz</p>
+        <p>IBAN:  DE15 7539 0000 0000 0117 03</p>
+        <p> BIC: GENODEF1WEN </p>
+    </div>
+    </div>
+
+
+    {/* <table className="bankverbindung">
       <tr>
         <td>Sparkasse Oberpfalz Nord</td>
         <td>IBAN:  DE37 7535 0000 0011 1149 15</td>
@@ -228,7 +243,7 @@ function HomePage() {
         <td>IBAN:  DE15 7539 0000 0000 0117 03</td>
         <td>BIC: GENODEF1WEN</td>
       </tr>
-    </table>
+    </table> */}
     <h3>Antrag</h3>
     <p>Bitte drucken Sie den Aufnahmeantrag aus und reichen diesen in der Geschäftsstelle des TC Am Langen Steg ein.</p>
     <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2020/01/Mitgliedsantrag-TC-Am-Langen-Steg.pdf" target="_blank">Link zum PDF Formular</a>
@@ -296,32 +311,32 @@ function HomePage() {
       <p>Gerd Neumann</p>
       <p>Ziegelweg 6b</p>  
       <p>92637 Weiden</p> 
-      <p>Telefon: 0160 91960835</p>
-      <p>E-Mail: neumi.regis@web.de</p>
+      <p>Tel: 0160 91960835</p>
+      <p>neumi.regis@web.de</p>
     </div>
     <div className="person">
     <h4>2. Vorsitzender</h4>
       <p>Manfred Kammerer</p>
       <p>Luitpoldstr. 20 a</p>  
       <p>92637 Weiden</p> 
-      <p>Telefon: 0961/44701</p>
-      <p>E-Mail: manfred.kammerer4747@web.de</p>
+      <p>Tel: 0961/44701</p>
+      <p>manfred.kammerer4747@web.de</p>
     </div>
     <div className="person">
     <h4>Schatzmeister</h4>
       <p>Herbert Beierl</p>
       <p>Haydnstr. 2</p>  
       <p>92665 Altenstadt</p> 
-      <p>Telefon: 09602/61289</p>
-      <p>E-Mail: herbert.beierl@gmx.de</p>
+      <p>Tel: 09602/61289</p>
+      <p>herbert.beierl@gmx.de</p>
     </div>
     <div className="person">
     <h4>Schriftführer</h4>
       <p>Reinhold Weigert</p>
       <p>Sebastianstraße 30</p>  
       <p>92637 Weiden</p> 
-      <p>Telefon: 0961/31534</p>
-      <p>E-Mail: WeigertR@t-online.de</p>
+      <p>Tel: 0961/31534</p>
+      <p>WeigertR@t-online.de</p>
     </div>
     </div>
 
@@ -341,23 +356,23 @@ function HomePage() {
       <p>Claudia Bögl</p>
       <p>Ziegelweg 6b</p>  
       <p>92637 Weiden</p> 
-      <p>Telefon: 0961/42061</p>
-      <p>E-Mail: C.Boegl@t-online.de</p>
+      <p>Tel: 0961/42061</p>
+      <p>C.Boegl@t-online.de</p>
     </div>
     <div className="person">
     <h4>Technische Leitung</h4>
       <p>Marc Badhorn</p>
       <p>Landgerichtsstraße 20</p>  
       <p>92637 Weiden</p> 
-      <p>Telefon: 0961/3988550</p>
-      <p>E-Mail: mbadhorn@weiden.de</p>
+      <p>Tel: 0961/3988550</p>
+      <p>mbadhorn@weiden.de</p>
     </div>
     <div className="person">
     <h4>Technische Leitung</h4>
       <p>Philipp Neubauer</p>
       <p>Sebastianstraße 30</p>  
       <p>92637 Weiden</p> 
-      <p>Telefon: 0151 46429978</p>
+      <p>Tel: 0151 46429978</p>
       
     </div>
     </div>
