@@ -33,3 +33,20 @@ background-color: white;
     font-family: 'SF Sports Night', sans-serif;
     text-decoration: none;
 }
+
+
+@media (max-width: 768px) {
+
+    .agb-header{
+        font-size: 4vh;
+    }
+
+    .agb-page p{
+        font-size: 1rem
+    }
+
+    .agb-page{
+        margin: 0vh 0vw!important;
+    }
+
+}
