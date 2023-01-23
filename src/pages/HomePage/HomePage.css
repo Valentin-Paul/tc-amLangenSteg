@@ -363,6 +363,10 @@ max-height: 6vh;
     margin-bottom: 0;
   }
 
+  body{
+  font-size: 90% !important;
+  }
+
   p{
     font-size: 1.2rem;
   }
@@ -375,7 +379,7 @@ max-height: 6vh;
   }
 
   .header h1{
-      font-size: 6.2vh;
+      font-size: 5vh;
       max-width: 100%;
       padding-top: 0;
       padding-left: 0;
@@ -390,7 +394,7 @@ max-height: 6vh;
   }
 
   .header h2{
-      font-size: 5vh;
+      font-size: 4vh;
        margin-top: -0.6em;
   }
 
@@ -458,6 +462,11 @@ max-height: 6vh;
     .kalender .event{
       width: 65vw;
       text-align: justify;
+      /* font-size: 1rem; */
+    }
+
+    .kalender .event p h3{
+      font-size: 1.1 rem;
     }
 
 
@@ -493,7 +502,7 @@ max-height: 6vh;
     }
 
     .kontakt p{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
       margin-bottom: 0;
     }
   
@@ -517,7 +526,7 @@ max-height: 6vh;
     }
 
     .team p{
-      font-size: 1.2rem;
+      font-size: 1.1rem;
     }
 
     .beiträge{
@@ -552,5 +561,12 @@ max-height: 6vh;
    font-size: 1.1rem;  
       }
  
+      .kontakt h4{
+        font-size: 1.1rem;
+      }
+
+      .kontakt h5{
+        font-size: 1.1rem;
+      }
 
 }
