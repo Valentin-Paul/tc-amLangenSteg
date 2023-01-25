@@ -21,7 +21,7 @@ E-Mail: info@tcamlangensteg.de <br/>
 <div className="verantwortliche">
 <div className="verantwortliche-person">
 Gerd Neumann <br/>
-Am Krumpes 35<br/>
+Ziegelweg 6b<br/>
 92637 Weiden<br/>
 Tel. 0961/27454<br/>
 E-Mail: neumi.regis@web.de<br/>
