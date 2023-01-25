@@ -46,7 +46,7 @@
     }
     
   
-  h1 {
+ .header h1 {
     position: relative;
     font-family: 'Exo';
     margin: 0;
@@ -105,6 +105,15 @@
       margin-top: -4vh;
   }
 
+
+  .text h1{
+    font-family: 'Exo';
+    margin: 0;
+    transform: skew(-15deg);
+    letter-spacing: 0.03em;
+    font-size: 5.5vw;
+  }
+
 .kalender{
   display: flex;
   flex-direction: row;
@@ -157,7 +166,7 @@
   margin-bottom: 10vh;
   text-align: center;
   align-items: center;
-  background-color: lightgrey;
+  background-color: white;
  bottom: 0;
  left: 0;
 }
@@ -176,6 +185,14 @@ max-height: 6vh;
 
 #kontakt .text{
   margin-top: -4vh;
+}
+
+.kontakt h4{
+  font-weight: 300;
+}
+
+.kontakt h5{
+  font-weight: 400;
 }
 
 #vereinsleitung .text{
