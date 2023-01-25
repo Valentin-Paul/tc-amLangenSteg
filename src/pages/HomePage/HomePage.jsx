@@ -11,6 +11,7 @@ import "../../components/scroll.css"
 import { useEffect,useState } from "react";
 import { Map, Marker,  ZoomControl } from "pigeon-maps"
 import Navbar from "../../components/Navbar/Navbar";
+import Aufnahmeantrag from "../images/Aufnahmeantrag TC mit Datenschutz.pdf"
 
 
 
@@ -88,9 +89,6 @@ function HomePage() {
   const [hue, setHue] = useState(0)
   const color = `hsl(${hue +700 % 360}deg 60% 50%)`
 
-  const [date, setDate] = useState("2022-12-02")
-  const months = ["Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"]
-  
 
   return (
     <>
@@ -124,27 +122,38 @@ function HomePage() {
 
     <div className="kalender">
     <div className="date">
-    <h5 className="month">{ months[Number(date.slice(5,7))-1] }</h5>
-    <h3 className="day">{date.slice(8,9) == 0? date.slice(9,10): date.sclice(8,10)}</h3>
+    <h5 className="month">Mär</h5>
+    <h3 className="day">3</h3>
     </div>
     <div className="event align-center">
-    <h3>Weihnachtsfeier 2022</h3>
-    <p>Der TC am Langen Steg lädt ein zur Weihnachtsfeier am Fr. 2.12. um 19:00 Uhr im Tennisheim. Für Glühwein, Tee sowie Plätzchen ist gesorgt.</p>
+    <h3>Schafkopf- und Romméturnier</h3>
+    <p>Der TC am Langen Steg lädt ab 19 Uhr zu unserem traditionellen Schafkopf- und Romméturnier im Tennisheim ein.</p>
     </div>
     </div>
 
     <div className="kalender">
     <div className="date">
-    <h5 className="month">Jan</h5>
-    <h3 className="day">14</h3>
+    <h5 className="month">jeden</h5>
+    <h3 className="day">Mi</h3>
     </div>
     <div className="event align-center">
-    <h3>Frühshoppen</h3>
-    <p>Der nächste Frühschoppen findet am wieder am 14.01.2023 im Vereinsheim statt. Wir freuen uns über euer Erscheinen</p>
+    <h3>Clubabend </h3>
+    <p>Jeden Mittwoch ab 18 Uhr sind alle Clubmitglieder herzlich zum Clubabend im Tennisheim eingeladen. </p>
+    </div>
+    </div>
+
+    <div className="kalender">
+    <div className="date">
+    <h5 className="month">jeden</h5>
+    <h3 className="day">So</h3>
+    </div>
+    <div className="event align-center">
+    <h3>Frühshoppen </h3>
+    <p>Immer Sonntags und eventuell an Feiertagen findet im Vereinsheim unser Frühshoppen zwischen 10-12 Uhr statt. Wir freuen uns über euer Erscheinen </p>
     </div>
     </div>
  
- <h6 >Bei kommenden Terminen halten wir euch hier auf dem Laufenden...</h6>
+ <h6 >Wichtiger Hinweis: nachdem unser Vereinsheim nicht öffentlich ist, dürfen nur Mitglieder bewirtet werden. Wir bitten um Verständnis.</h6>
    
     </div>
     <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed={imageSpeed}>
@@ -160,20 +169,43 @@ function HomePage() {
     <div className="text" data-scroll data-scroll-speed={textSpeed}>
     <h1 >Mannschaften</h1>
 
+<div className="all-teams">
 <div className="team">
-<h3>Mädchen 15 Nordliga 2 Gr. 446</h3>
-    <p>Trainingszeiten: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
-    <p> Mannschaftsspiele: <br/> Freitags ab 16:00 Uhr</p>
+<h3>Mädchen 15 Nordliga 2 Gr. 451</h3>
+    <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
+    <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
+    <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
     <p> Mannschaftsführerin: <br/> Leni Strauß - Tel. 0961 / 3989899</p>
+</div>
+
+<div className="team">
+<h3>Jungen 15 Nordliga 4 Gr. 406</h3>
+    <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
+    <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
+    <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
+    <p> Mannschaftsführerin: <br/> (ausstehend)</p>
 </div>
     
 <div className="team">
-<h3>Damen Nordliga 4 (4er) Gr. 130</h3>
-    <p>Trainingszeiten: <br/> Mittwoch von 15:30 – 17:30 Uhr</p>
-        <p> Mannschaftsspiele: <br/> Sonntags um 10:00 Uhr</p>
-        <p> Mannschaftsführerin: <br/> Claudia Bögl - Tel:  0171 3785160 </p>
+<h3>Damen Nordliga 4 (4er) Gr. 132</h3>
+    <p>Trainingszeiten Sommer: <br/> Mittwoch von 15:30 – 17:30 Uhr</p>
+    <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 9:00 – 10:00 Uhr</p>
+        <p> Mannschaftsspiele: <br/> Sonntags um 9:00 Uhr bzw. 14:00 Uhr</p>
+        <p> Mannschaftsführerin: <br/> Claudia Bögl </p>
 
 </div>
+
+<div className="team">
+<h3>Herren Nordliga 4 Gr. 049</h3>
+    <p>Trainingszeiten Sommer: <br/> (steht noch nicht fest)</p>
+    <p>Trainingszeiten Winter (Halle am Postkeller): <br/> (steht noch nicht fest)</p>
+    <p> Mannschaftsspiele: <br/> (steht noch nicht fest)</p>
+    <p> Mannschaftsführerin: <br/> (ausstehend)</p>
+</div>
+</div>
+
+
+
     </div>
     </div>
 
@@ -246,7 +278,7 @@ function HomePage() {
     </table> */}
     <h3>Antrag</h3>
     <p>Bitte drucken Sie den Aufnahmeantrag aus und reichen diesen in der Geschäftsstelle des TC Am Langen Steg ein.</p>
-    <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2020/01/Mitgliedsantrag-TC-Am-Langen-Steg.pdf" target="_blank">Link zum PDF Formular</a>
+    <a className="link" href={Aufnahmeantrag} target="_blank" download>Link zum PDF Formular</a>
     </div>
 
     <div className="image" style={{ backgroundImage: `url(${second})` }} data-scroll  data-scroll-speed={imageSpeed}>
@@ -258,11 +290,8 @@ function HomePage() {
     <div className="image" style={{ backgroundImage: `url(${fifth})` }} data-scroll  data-scroll-speed={imageSpeed}></div>
     <div className="text kontakt" data-scroll  data-scroll-speed={textSpeed}>
     <h1>Kontakt</h1>
-    <h4>Solltest du Fragen, Anliegen oder Kritik haben - Schreibe uns einfach eine Nachricht oder rufe an! </h4>
-    <div className="telefon-mail">
-    <h5>Telefon: 0961/38824610</h5>
-    <h5>Email: info@tcamlangensteg.de</h5>
-    </div>
+    <h4>Solltest du Fragen, Anliegen oder Kritik haben - Schreibe uns einfach eine Nachricht! </h4>
+  
     <div className="adressen">
     <div>
     <h3>Adresse</h3>
@@ -276,6 +305,11 @@ function HomePage() {
       <p>Postfach 2501</p>
       <p>92615 Weiden</p> 
     </div>
+    </div>
+
+    <div className="telefon-mail">
+    <h5>Telefon: 0961/38824610</h5>
+    <h5>Email: info@tcamlangensteg.de</h5>
     </div>
 
     <Map height={300} defaultCenter={[49.683893, 12.172768]} defaultZoom={15}>
@@ -352,7 +386,7 @@ function HomePage() {
     
     </div>
     <div className="person">
-    <h4>Vergnügungswärtin</h4>
+    <h4>Vergnügungswart/in</h4>
       <p>Claudia Bögl</p>
       <p>Ziegelweg 6b</p>  
       <p>92637 Weiden</p> 

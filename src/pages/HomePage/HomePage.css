@@ -170,6 +170,10 @@ max-height: 6vh;
   margin-top: -2vh;
 }
 
+.mitgliedschaft h1{
+  margin-bottom: 2vh;
+}
+
 #kontakt .text{
   margin-top: -4vh;
 }
@@ -210,6 +214,10 @@ max-height: 6vh;
 
   .adressen{
     margin-bottom: 5vh;
+  }
+
+  .telefon-mail{
+    margin: 4vh 0vw;
   }
 
 
@@ -345,12 +353,19 @@ max-height: 6vh;
           font-size: 1rem;
         }
 
-        .bankverbindungen{
-
-        }
-
         #mitgliedschaft h3{
           margin-top: 4vh;
+        }
+
+       .all-teams{
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content:space-between
+        }
+
+        .team{
+          width: 45%
         }
 
     }
@@ -514,9 +529,7 @@ max-height: 6vh;
       margin-bottom: 3vh;
     }
 
-    .telefon-mail{
-      margin: 4vh 0vw;
-    }
+   
 
     .satzung{
       margin-top: 3vh;
