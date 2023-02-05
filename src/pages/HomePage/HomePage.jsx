@@ -148,8 +148,8 @@ function HomePage() {
     <h3 className="day">So</h3>
     </div>
     <div className="event align-center">
-    <h3>Frühshoppen </h3>
-    <p>Immer Sonntags und eventuell an Feiertagen findet im Vereinsheim unser Frühshoppen zwischen 10-12 Uhr statt. Wir freuen uns über euer Erscheinen </p>
+    <h3>Frühschoppen </h3>
+    <p>Immer Sonntags und eventuell an Feiertagen findet im Vereinsheim unser Frühschoppen zwischen 10-12 Uhr statt. Wir freuen uns über euer Erscheinen </p>
     </div>
     </div>
  
@@ -175,15 +175,15 @@ function HomePage() {
     <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
     <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
-    <p> Mannschaftsführerin: <br/> Leni Strauß - Tel. 0961 / 3989899</p>
+    <p> Mannschaftsführer/in: <br/> Leni Strauß - Tel. 0961 / 3989899</p>
 </div>
 
 <div className="team">
-<h3>Jungen 15 Nordliga 4 Gr. 406</h3>
+<h3>Knaben 15 Nordliga 4 Gr. 406</h3>
     <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
     <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
-    <p> Mannschaftsführerin: <br/> (ausstehend)</p>
+    <p> Mannschaftsführer/in: <br/> (ausstehend)</p>
 </div>
     
 <div className="team">
@@ -191,7 +191,7 @@ function HomePage() {
     <p>Trainingszeiten Sommer: <br/> Mittwoch von 15:30 – 17:30 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 9:00 – 10:00 Uhr</p>
         <p> Mannschaftsspiele: <br/> Sonntags um 9:00 Uhr bzw. 14:00 Uhr</p>
-        <p> Mannschaftsführerin: <br/> Claudia Bögl </p>
+        <p> Mannschaftsführer/in: <br/> (ausstehend) </p>
 
 </div>
 
@@ -199,8 +199,8 @@ function HomePage() {
 <h3>Herren Nordliga 4 Gr. 049</h3>
     <p>Trainingszeiten Sommer: <br/> (steht noch nicht fest)</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> (steht noch nicht fest)</p>
-    <p> Mannschaftsspiele: <br/> (steht noch nicht fest)</p>
-    <p> Mannschaftsführerin: <br/> (ausstehend)</p>
+    <p> Mannschaftsspiele: <br/> Sonntags um 9.00 Uhr bzw. 14.00 Uhr</p>
+    <p> Mannschaftsführer/in: <br/> (ausstehend)</p>
 </div>
 </div>
 
