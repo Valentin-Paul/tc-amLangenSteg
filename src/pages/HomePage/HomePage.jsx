@@ -122,6 +122,17 @@ function HomePage() {
 
     <div className="kalender">
     <div className="date">
+    <h5 className="month">Feb</h5>
+    <h3 className="day">21</h3>
+    </div>
+    <div className="event align-center">
+    <h3>Faschingsdienstag</h3>
+    <p>Um 15.00 Uhr gibt es Kaffee und Krapfen im Vereinsheim. Das Fischessen am Aschermittwoch muss dieses Jahr leider ausfallen.</p>
+    </div>
+    </div>
+
+    <div className="kalender">
+    <div className="date">
     <h5 className="month">Mär</h5>
     <h3 className="day">3</h3>
     </div>
