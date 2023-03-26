@@ -14,7 +14,7 @@ import { useEffect, useState, useRef, containerRef, componentDidMount, createRef
 import { Map, Marker,  ZoomControl } from "pigeon-maps"
 import Navbar from "../../components/Navbar/Navbar";
 import Aufnahmeantrag from "../images/Aufnahmeantrag TC mit Datenschutz.pdf"
-import Spline from '@splinetool/react-spline';
+
 // import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 
@@ -147,7 +147,7 @@ function HomePage() {
 
     
     </div>
-    {/* <Spline id="ball-model" scene="https://prod.spline.design/rJNSa1dl8DLyGAEa/scene.splinecode" /> */}
+  
     </section>
     
 
