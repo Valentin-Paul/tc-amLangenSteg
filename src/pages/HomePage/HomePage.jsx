@@ -5,99 +5,129 @@ import third from "../images/moises-alex-WqI-PbYugn4-unsplash.jpg"
 import forth from "../images/pexels-cottonbro-studio-5740517.jpg"
 import  fifth from "../images/ben-hershey-K9HgyI3qmqA-unsplash.jpg"
 import sixth from "../images/erwan-hesry-uJ-OO3aZsSQ-unsplash.jpg"
+import telephone from "../images/telephone.png"
+import mail from "../images/mail.png"
 import upArrows from "../images/up-arrows.png"
-import LocomotiveScroll from 'locomotive-scroll';
+import {useLocomotiveScroll, LocomotiveScrollProvider} from 'react-locomotive-scroll';
 import "../../components/scroll.css"
-import { useEffect,useState } from "react";
+import { useEffect, useState, useRef, containerRef, componentDidMount, createRef} from "react";
 import { Map, Marker,  ZoomControl } from "pigeon-maps"
 import Navbar from "../../components/Navbar/Navbar";
 import Aufnahmeantrag from "../images/Aufnahmeantrag TC mit Datenschutz.pdf"
-
-
+import Spline from '@splinetool/react-spline';
+// import { useLocomotiveScroll } from 'react-locomotive-scroll';
 
 
 
 function HomePage() {
 
+
+
   const[imageSpeed, setImageSpeed] = useState(null)
   const [textSpeed, setTextSpeed] = useState(null)
 
+  const containerRef = useRef(null);
+  const { scroll } = useLocomotiveScroll({
+    el: containerRef.current,
+    smooth: true,
+  });
 
-  useEffect(()=>{
-  
-    const scroll = new LocomotiveScroll({
 
-    
-      el: document.querySelector("[data-scroll-container]"),
-      smooth: true,
-      // smartphone: {
-      //   // breakpoint: 0,
-      //   getDirection: true,
-      //   smooth: true,
-      //   smoothMobile: true,
-      //   scrollFromAnywhere: true,
-      //   resetNativeScroll: true,
-      //   // lerp: 1,
-      // },
-      // tablet: {
-      // //  breakpoint: 0,
-      // getDirection: true,
-      //   smooth: true,
-      //   smoothMobile: true,
-      //   scrollFromAnywhere: true,
-      //   resetNativeScroll: true,
-      //   // lerp: 1,
-      // }
-    })
-  
-    const anchorLinks = document.querySelectorAll(
-      'a[href^=\\#]:not([href$=\\#])'
-    );
-  
-    anchorLinks.forEach((anchorLink) => {
-      let hashval = anchorLink.getAttribute('href');
-      let target = document.querySelector(hashval);
-      let coordinates = document.getElementById(target.id).getBoundingClientRect().top - 100
-  
-      anchorLink.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-  
-        // anchorLinks.forEach((anchorLink) => {
-        //   anchorLink.classList.remove('active');
-        // });
-  
-        // e.target.classList.add('active');
-        scroll.scrollTo(coordinates);
-      });
-    
-    });
-   
 
-    let screenWidth = window.innerWidth
+  const goToTop = () => {
+    scroll && scroll.scrollTo(0,0)
+  }
+
+
+  useEffect(() => {
+        let screenWidth = window.innerWidth
     if (screenWidth < 687){
-      setImageSpeed("1")
-      setTextSpeed("1")
+      setImageSpeed("0.5")
+      setTextSpeed("0.5")
     }
     else{
-      setImageSpeed("1")
-      setTextSpeed("3")
+      setImageSpeed("0.1")
+      setTextSpeed("1.5")
     }
+    if (scroll) {
+      scroll.update();
+    }
+  }, [scroll]);
+
+
+  // useEffect(()=>{
   
-  }, [])
+  //   const scroll = new LocomotiveScroll({
+
+    
+  //     el: document.querySelector("[data-scroll-container]"),
+  //     smooth: true,
+  //     // smartphone: {
+  //     //   // breakpoint: 0,
+  //     //   getDirection: true,
+  //     //   smooth: true,
+  //     //   smoothMobile: true,
+  //     //   scrollFromAnywhere: true,
+  //     //   resetNativeScroll: true,
+  //     //   // lerp: 1,
+  //     // },
+  //     // tablet: {
+  //     // //  breakpoint: 0,
+  //     // getDirection: true,
+  //     //   smooth: true,
+  //     //   smoothMobile: true,
+  //     //   scrollFromAnywhere: true,
+  //     //   resetNativeScroll: true,
+  //     //   // lerp: 1,
+  //     // }
+  //   })
+  
+  //   const anchorLinks = document.querySelectorAll(
+  //     'a[href^=\\#]:not([href$=\\#])'
+  //   );
+  
+  //   anchorLinks.forEach((anchorLink) => {
+  //     let hashval = anchorLink.getAttribute('href');
+  //     let target = document.querySelector(hashval);
+  //     let coordinates = document.getElementById(target.id).getBoundingClientRect().top - 100
+  
+  //     anchorLink.addEventListener('click', (e) => {
+  //       e.preventDefault();
+  //       e.stopPropagation();
+  
+  //       // anchorLinks.forEach((anchorLink) => {
+  //       //   anchorLink.classList.remove('active');
+  //       // });
+  
+  //       // e.target.classList.add('active');
+  //       scroll.scrollTo(coordinates);
+  //     });
+    
+  //   });
+   
+
+  //   let screenWidth = window.innerWidth
+  //   if (screenWidth < 687){
+  //     setImageSpeed("1")
+  //     setTextSpeed("1")
+  //   }
+  //   else{
+  //     setImageSpeed("1")
+  //     setTextSpeed("3")
+  //   }
+  
+  // }, [])
 
   const [hue, setHue] = useState(0)
   const color = `hsl(${hue +700 % 360}deg 60% 50%)`
 
-
   return (
     <>
-      <Navbar/>
-  
-    <div className="homepage disabled-mobile" data-scroll-container>
-    
-    <div className="court" style={{ backgroundImage: `url(${court})` }} data-scroll data-scroll-speed={imageSpeed}>
-     <div className="header" id="home" data-scroll data-scroll-speed="4">
+         
+      <Navbar />
+    <main className="homepage disabled-mobile" data-scroll-container >
+    <section id="home" className="court" style={{ backgroundImage: `url(${court})` }} data-scroll-section data-scroll-speed={imageSpeed}>
+     <div className="header"  data-scroll data-scroll-speed="4">
     <div className="grid"></div>
     <div className="lines"></div>
     <h1>
@@ -109,32 +139,30 @@ function HomePage() {
     <h3 >TC Am Langen Steg e.V. in Weiden in der Oberpfalz</h3>
 
     
+
+
+    
+
+
+
+    
     </div>
-    </div>
+    {/* <Spline id="ball-model" scene="https://prod.spline.design/rJNSa1dl8DLyGAEa/scene.splinecode" /> */}
+    </section>
     
 
 
     {/* // AKTUELLES */}
 
-    <div className="container" id="aktuelles" >
-    <div className="text" data-scroll data-scroll-speed={textSpeed}>
+    <section className="container" id="aktuelles" data-scroll-section>
+    <div className="text" data-scroll  data-scroll-speed={textSpeed} data-scroll-class="appear">
     <h1>Aktuelles</h1>
 
-    <div className="kalender">
-    <div className="date">
-    <h5 className="month">Feb</h5>
-    <h3 className="day">21</h3>
-    </div>
-    <div className="event align-center">
-    <h3>Faschingsdienstag</h3>
-    <p>Um 15.00 Uhr gibt es Kaffee und Krapfen im Vereinsheim. Das Fischessen am Aschermittwoch muss dieses Jahr leider ausfallen.</p>
-    </div>
-    </div>
 
     <div className="kalender">
     <div className="date">
-    <h5 className="month">Mär</h5>
-    <h3 className="day">3</h3>
+    <h5 className="month">Apr</h5>
+    <h3 className="day">21</h3>
     </div>
     <div className="event align-center">
     <h3>Schafkopf- und Romméturnier</h3>
@@ -167,17 +195,17 @@ function HomePage() {
  <h6 >Wichtiger Hinweis: nachdem unser Vereinsheim nicht öffentlich ist, dürfen nur Mitglieder bewirtet werden. Wir bitten um Verständnis.</h6>
    
     </div>
-    <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll data-scroll-speed={imageSpeed}>
+    <div className="image" style={{ backgroundImage: `url(${forth})` }} data-scroll  data-scroll-speed={imageSpeed}>
     </div>
-    </div>
+    </section>
 
 
 
 {/* // MANNSCHAFTEN */}
 
-<div className="container" id="mannschaften">
-    <div className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll data-scroll-speed={imageSpeed} ></div>
-    <div className="text" data-scroll data-scroll-speed={textSpeed}>
+<section className="container"  data-scroll-section>
+    <div id="mannschaften" className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll  data-scroll-speed={imageSpeed} ></div>
+    <div className="text" data-scroll  data-scroll-speed={textSpeed}>
     <h1 >Mannschaften</h1>
 
 <div className="all-teams">
@@ -218,12 +246,13 @@ function HomePage() {
 
 
     </div>
-    </div>
+    </section>
+
 
    
 
   
-    <div className="container" id="mitgliedschaft">
+    <section className="container" id="mitgliedschaft" data-scroll-section>
     <div className="text mitgliedschaft" data-scroll data-scroll-speed={textSpeed}>
     <h1>Mitgliedschaft</h1>
     <p>Wir freuen uns, dass Sie sich für den TC Am Langen Steg interessieren! Möchten Sie selbst Mitglied werden? Hier finden Sie die aktuellen Beiträge für Mitglieder sowie einen Aufnahmeantrag zum downloaden und ausdrucken.</p>
@@ -294,10 +323,13 @@ function HomePage() {
 
     <div className="image" style={{ backgroundImage: `url(${second})` }} data-scroll  data-scroll-speed={imageSpeed}>
     </div>
-    </div>
+    </section>
 
 
-    <div className="container" id="kontakt">
+
+
+
+    <section className="container" id="kontakt" data-scroll-section>
     <div className="image" style={{ backgroundImage: `url(${fifth})` }} data-scroll  data-scroll-speed={imageSpeed}></div>
     <div className="text kontakt" data-scroll  data-scroll-speed={textSpeed}>
     <h1>Kontakt</h1>
@@ -305,13 +337,13 @@ function HomePage() {
   
     <div className="adressen">
     <div>
-    <h3>Adresse</h3>
+    <h5>Adresse</h5>
       <p>TC Am Langen Steg e.V.</p>  
       <p>Am Langen Steg 21</p>
       <p>92637  Weiden</p> 
     </div>
     <div>
-    <h3>Postadresse</h3>
+    <h5>Postadresse</h5>
       <p>TC Am Langen Steg e.V.</p>  
       <p>Postfach 2501</p>
       <p>92615 Weiden</p> 
@@ -319,11 +351,16 @@ function HomePage() {
     </div>
 
     <div className="telefon-mail">
-    <h5>Telefon: 0961/38824610</h5>
-    <h5>Email: info@tcamlangensteg.de</h5>
+    <p>Kontaktzeiten: Mi 18:00-20:00, So 10:00 - 12:00   </p>
+    <p>Ruft uns gerne zu diesen Zeiten an, oder schaut einfach am Tennisplatz vorbei.</p>
+    <div className="telefon-mail-kontakt">
+    <h4><img src={telephone}></img> 0961/38824610</h4>
+    <h4><img src={mail}></img>info@tcamlangensteg.de</h4>
+    </div>
     </div>
 
-    <Map height={300} defaultCenter={[49.683893, 12.172768]} defaultZoom={15}>
+    <div className="map-div">
+    <Map height={300} defaultCenter={[49.683893, 12.172768]} defaultZoom={15} id='map' metaWheelZoom="false">
       <Marker 
         width={35}
         anchor={[49.683893, 12.172768]} 
@@ -332,20 +369,21 @@ function HomePage() {
       />
       < ZoomControl/>
     </Map>
+    </div>
    
   
     <div className="satzung">
-    <h3>Satzung</h3>
+    <h5>Satzung</h5>
     <p>Hier finden Sie die Satzung des TC Am Langen Steg in Weiden i. d. OPf. (Stand 30.06.2012)</p>
     <a className="link" href="https://www.tcamlangensteg.de/wp-content/uploads/2014/12/Satzung-TC-Am-Langen-Steg.pdf" target="_blank">Satzung</a>
     </div>
     
  </div>
-    </div>
+    </section>
 
     
     <div className="last-item-with-footer" >
-    <div className="container" id="vereinsleitung">
+    <section className="container" id="vereinsleitung" data-scroll-section>
     <div className="text" data-scroll  data-scroll-speed={textSpeed}>
     <h1>Vereinsleitung</h1>
     <h3>Vorstand</h3>
@@ -356,32 +394,24 @@ function HomePage() {
       <p>Gerd Neumann</p>
       <p>Ziegelweg 6b</p>  
       <p>92637 Weiden</p> 
-      <p>Tel: 0160 91960835</p>
-      <p>neumi.regis@web.de</p>
     </div>
     <div className="person">
     <h4>2. Vorsitzender</h4>
       <p>Manfred Kammerer</p>
       <p>Luitpoldstr. 20 a</p>  
       <p>92637 Weiden</p> 
-      <p>Tel: 0961/44701</p>
-      <p>manfred.kammerer4747@web.de</p>
     </div>
     <div className="person">
     <h4>Schatzmeister</h4>
       <p>Herbert Beierl</p>
       <p>Haydnstr. 2</p>  
       <p>92665 Altenstadt</p> 
-      <p>Tel: 09602/61289</p>
-      <p>herbert.beierl@gmx.de</p>
     </div>
     <div className="person">
     <h4>Schriftführer</h4>
       <p>Reinhold Weigert</p>
       <p>Sebastianstraße 30</p>  
       <p>92637 Weiden</p> 
-      <p>Tel: 0961/31534</p>
-      <p>WeigertR@t-online.de</p>
     </div>
     </div>
 
@@ -393,7 +423,6 @@ function HomePage() {
       <p>Daniel Strobl</p>
       <p>Thomastr. 8</p>  
       <p>92665 Altenstadt</p> 
-      <p>Telefon: 09602/615656</p>
     
     </div>
     <div className="person">
@@ -401,23 +430,18 @@ function HomePage() {
       <p>Claudia Bögl</p>
       <p>Ziegelweg 6b</p>  
       <p>92637 Weiden</p> 
-      <p>Tel: 0961/42061</p>
-      <p>C.Boegl@t-online.de</p>
     </div>
     <div className="person">
     <h4>Technische Leitung</h4>
       <p>Marc Badhorn</p>
       <p>Landgerichtsstraße 20</p>  
       <p>92637 Weiden</p> 
-      <p>Tel: 0961/3988550</p>
-      <p>mbadhorn@weiden.de</p>
     </div>
     <div className="person">
     <h4>Technische Leitung</h4>
       <p>Philipp Neubauer</p>
       <p>Sebastianstraße 30</p>  
       <p>92637 Weiden</p> 
-      <p>Tel: 0151 46429978</p>
       
     </div>
     </div>
@@ -428,21 +452,27 @@ function HomePage() {
     </div>
 
    
-    </div>
+    
 
-    <a className="footer"  href="#home">
+    <a className="footer" onClick={()=>{goToTop()}} >
     <img src={upArrows}></img>
     </a>
-    
+    </section>
     </div>
 
 
    
 
 
-    </div>
+    </main>
     </>
   );
 }
 
 export default HomePage;
+
+
+
+
+
+// export default Homepage;

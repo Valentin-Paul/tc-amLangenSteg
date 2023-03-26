@@ -6,6 +6,7 @@ function AGB() {
      <div className="navbar-agb">
     <a href="/">Home</a>
     </div>
+
     <div className="agb-page">
         <h3 className="agb-header">Impressum & Datenschutzerklärung</h3>
         <h5>Angaben gem. § 5 TMG:</h5>
