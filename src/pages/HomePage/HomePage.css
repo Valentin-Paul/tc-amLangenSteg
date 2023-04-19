@@ -455,10 +455,12 @@ max-height: 6vh;
       /* padding-top: 25vh; */
       /* transform: rotate(-90deg); */
       width: 100vw;
-      
   }
 
-  
+  .lines{
+    position: relative;
+    top: 10vh;
+  }
 
   .header h1{
       font-size: 6.1vh;
