@@ -30,6 +30,18 @@ function HomePage() {
   const { scroll } = useLocomotiveScroll({
     el: containerRef.current,
     smooth: true,
+    smoothMobile: 0,
+    mobile: {
+      breakpoint: 767,
+        getDirection: true,
+        smooth: true,
+        scrollFromAnywhere: true,
+        resetNativeScroll: true,
+  },
+  tablet: {
+    smooth: true,
+    breakpoint: 0,
+},
   });
 
 
@@ -43,7 +55,7 @@ function HomePage() {
         let screenWidth = window.innerWidth
     if (screenWidth < 687){
       setImageSpeed("0.5")
-      setTextSpeed("0.5")
+      setTextSpeed("2.5")
     }
     else{
       setImageSpeed("0.1")
@@ -203,8 +215,8 @@ function HomePage() {
 
 {/* // MANNSCHAFTEN */}
 
-<section className="container"  data-scroll-section>
-    <div id="mannschaften" className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll  data-scroll-speed={imageSpeed} ></div>
+<section className="container" id="mannschaften" data-scroll-section>
+    <div  className="image"  style={{ backgroundImage: `url(${third})` }} data-scroll  data-scroll-speed={imageSpeed} ></div>
     <div className="text" data-scroll  data-scroll-speed={textSpeed}>
     <h1 >Mannschaften</h1>
 
