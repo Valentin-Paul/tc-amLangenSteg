@@ -58,7 +58,7 @@ function HomePage() {
       setTextSpeed("2.5")
     }
     else{
-      setImageSpeed("0.1")
+      setImageSpeed("0")
       setTextSpeed("1.5")
     }
     if (scroll) {
@@ -173,17 +173,6 @@ function HomePage() {
 
     <div className="kalender">
     <div className="date">
-    <h5 className="month">Apr</h5>
-    <h3 className="day">21</h3>
-    </div>
-    <div className="event align-center">
-    <h3>Schafkopf- und Romméturnier</h3>
-    <p>Der TC am Langen Steg lädt ab 19 Uhr zu unserem traditionellen Schafkopf- und Romméturnier im Tennisheim ein.</p>
-    </div>
-    </div>
-
-    <div className="kalender">
-    <div className="date">
     <h5 className="month">jeden</h5>
     <h3 className="day">Mi</h3>
     </div>
@@ -226,7 +215,7 @@ function HomePage() {
     <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
     <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
-    <p> Mannschaftsführer/in: <br/> Leni Strauß - Tel. 0961 / 3989899</p>
+    <p> Mannschaftsführer/in: <br/> Leni Strauß</p>
 </div>
 
 <div className="team">
@@ -234,29 +223,30 @@ function HomePage() {
     <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
     <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
-    <p> Mannschaftsführer/in: <br/> (ausstehend)</p>
+    <p> Mannschaftsführer/in: <br/> Elias Illing</p>
 </div>
     
 <div className="team">
 <h3>Damen Nordliga 4 (4er) Gr. 132</h3>
-    <p>Trainingszeiten Sommer: <br/> Mittwoch von 15:30 – 17:30 Uhr</p>
+    <p>Trainingszeiten Sommer: <br/> Mittwoch von 15:30 – 17:00 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 9:00 – 10:00 Uhr</p>
         <p> Mannschaftsspiele: <br/> Sonntags um 9:00 Uhr bzw. 14:00 Uhr</p>
-        <p> Mannschaftsführer/in: <br/> (ausstehend) </p>
+        <p> Mannschaftsführer/in: <br/> Nicole Illing </p>
 
 </div>
 
 <div className="team">
 <h3>Herren Nordliga 4 Gr. 049</h3>
-    <p>Trainingszeiten Sommer: <br/> (steht noch nicht fest)</p>
+    <p>Trainingszeiten Sommer: <br/> Samstag 11:00 - 12:00 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> (steht noch nicht fest)</p>
     <p> Mannschaftsspiele: <br/> Sonntags um 9.00 Uhr bzw. 14.00 Uhr</p>
-    <p> Mannschaftsführer/in: <br/> (ausstehend)</p>
+    <p> Mannschaftsführer/in: <br/> Gerhard Neumann</p>
 </div>
 </div>
 
-
-
+<div className="spielpläne">
+<a href="https://www.btv.de/de/mein-verein/vereinsseite/tc-am-langen-steg-weiden.html" target="_blank">Spielpläne & Tabellen</a>
+</div>
     </div>
     </section>
 

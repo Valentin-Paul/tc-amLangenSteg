@@ -1,4 +1,5 @@
 import "./App.css";
+import "./components/scroll.css"
 import { Routes, Route } from "react-router-dom";
 import AGB from "./pages/AGB/AGB";
 import HomePage from "./pages/HomePage/HomePage";

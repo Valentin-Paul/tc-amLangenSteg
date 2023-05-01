@@ -229,7 +229,7 @@ max-height: 6vh;
 
 .bankverbindung p{
   margin-top: 1vh;
-       font-size: 1.1rem;
+       font-size: 1rem;
     }
 
  .adressen p{
@@ -282,6 +282,10 @@ max-height: 6vh;
   overscroll-behavior: none;
   overflow-y: hidden;
   touch-action: none;
+}
+
+.spielpläne{
+  text-align: center !important;
 }
 
 
@@ -417,7 +421,7 @@ max-height: 6vh;
           width: 90%;
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;
+          justify-content: space-between;
           font-size: 1rem;
         }
 
@@ -669,7 +673,7 @@ max-height: 6vh;
 /* +++++++++++++ React-locomotive-scroll
 
 /*! locomotive-scroll v4.1.3 | MIT License | https://github.com/locomotivemtl/locomotive-scroll */
-html.has-scroll-smooth {
+/* html.has-scroll-smooth {
   overflow: hidden; }
 
 html.has-scroll-dragging {
@@ -733,4 +737,4 @@ html.has-scroll-dragging {
     cursor: grabbing; }
   [data-scroll-direction="horizontal"] .c-scrollbar_thumb {
     right: auto;
-    bottom: 0; }
+    bottom: 0; } */

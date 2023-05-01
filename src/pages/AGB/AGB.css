@@ -1,7 +1,13 @@
+
 .agb-page{
     margin: 0vh 5vw 4vh 5vw!important;
-    padding: 3vh 3vw !important;
+    padding: 3vh 3vw 8vh 3vw!important;
     background-color: lightgray;
+    font-size: 1rem;
+}
+
+.agb-page span{
+    font-weight: 700;
 }
 
 .agb-header{
@@ -9,9 +15,9 @@
 }
 
 .verantwortliche{
-display: flex;
-flex-direction: row;
-justify-content: center; 
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
 }
 
 .verantwortliche-person{
@@ -20,6 +26,7 @@ justify-content: center;
 
 .agb-page bold{
     font-weight: 700;
+    padding-bottom: 0.75rem;
 }
 
 .navbar-agb{
