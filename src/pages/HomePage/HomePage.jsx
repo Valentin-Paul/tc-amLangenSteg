@@ -210,20 +210,14 @@ function HomePage() {
     <h1 >Mannschaften</h1>
 
 <div className="all-teams">
-<div className="team">
-<h3>Mädchen 15 Nordliga 2 Gr. 451</h3>
-    <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
-    <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
-    <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
-    <p> Mannschaftsführer/in: <br/> Leni Strauß</p>
-</div>
+
 
 <div className="team">
 <h3>Knaben 15 Nordliga 4 Gr. 406</h3>
     <p>Trainingszeiten Sommer: <br/> Dienstag von 17:00 – 18:00 Uhr</p>
     <p>Trainingszeiten Winter (Halle am Postkeller): <br/> Samstag von 10:00 – 11:00 Uhr</p>
     <p> Mannschaftsspiele: <br/> Freitags ab 15:00 Uhr</p>
-    <p> Mannschaftsführer/in: <br/> Elias Illing</p>
+    <p> Mannschaftsführer/in: <br/> Elisa Illing</p>
 </div>
     
 <div className="team">
