@@ -170,6 +170,16 @@ function HomePage() {
     <div className="text" data-scroll  data-scroll-speed={textSpeed} data-scroll-class="appear">
     <h1>Aktuelles</h1>
 
+    <div className="kalender">
+    <div className="date">
+    <h5 className="month">Jul</h5>
+    <h3 className="day">29</h3>
+    </div>
+    <div className="event align-center">
+    <h3>Laubenfest </h3>
+    <p>Wir laden euch wieder herzlich zu unserem jährlichen Laubenfest ein. </p>
+    </div>
+    </div>
 
     <div className="kalender">
     <div className="date">
