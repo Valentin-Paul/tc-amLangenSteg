@@ -1,0 +1,59 @@
+.blog h1{
+    font-family: 'Exo';
+    transform: skew(-15deg);
+    letter-spacing: 0.03em;
+}
+
+.navbar-agb{
+    background-color: black;
+    }
+    
+.navbar-agb a{
+    font-size: 2.5rem;
+    color: white;
+    font-weight: 300;
+    font-family: 'SF Sports Night', sans-serif;
+    text-decoration: none;
+}
+
+.single-article{
+        overflow: hidden;
+        position: relative;
+        object-fit: cover;
+        background-size: cover;
+}
+
+.article-image{
+    opacity: 0.5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+.container-article{
+    position: relative;
+    z-index: 10;
+}
+
+.card-text{
+    text-align: justify !important;
+}
+
+.card-image{
+    overflow: hidden;
+    object-fit: cover;
+    height: 20rem;
+}
+
+.card-body{
+    min-height: 14rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-body .btn{
+
+}

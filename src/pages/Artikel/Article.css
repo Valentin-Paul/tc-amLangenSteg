@@ -1,0 +1,27 @@
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+#article-content{
+    padding-top: 2rem;
+    text-align: justify !important;
+}
+
+.article-header h1{
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: 800;
+}
+
+.article-header p{
+    font-size: 1.75rem;
+    line-height: 2.5rem;
+    font-weight: 200;
+}
+
+.article-content{
+    padding: 1rem 1rem 2rem 1rem !important;
+}
+
+.SVGRepo_bgCarrier{
+    height: 0.5rem !important;
+    width: 0.5rem !important;
+}

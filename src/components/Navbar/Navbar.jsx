@@ -143,7 +143,8 @@ function Navbar() {
           <ul className="dropdown-menu">
           <li><a className="dropdown-item"  onClick={() => goToSection('#kontakt')}>Kontakt</a></li>
           <li><a className="dropdown-item"  onClick={() => goToSection('#vereinsleitung')}>Vereinsleitung</a></li>
-            <li><a className="dropdown-item" href="/agb">AGB/ Impressum</a></li>
+          <li><a className="dropdown-item" href="/agb">AGB/ Impressum</a></li>
+          <li><a className="dropdown-item" href="/blog">Artikel</a></li>
           </ul>
         </li>
         
@@ -159,3 +160,4 @@ function Navbar() {
 }
 
 export default Navbar;
+

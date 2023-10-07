@@ -4,7 +4,10 @@ import { Routes, Route } from "react-router-dom";
 import AGB from "./pages/AGB/AGB";
 import HomePage from "./pages/HomePage/HomePage";
 import { LocomotiveScrollProvider } from 'react-locomotive-scroll'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import API from "./pages/api";
+import Blog from "./pages/Blog/Blog";
+import Article from "./pages/Artikel/Article";
 
 function App() {
 
@@ -26,10 +29,14 @@ const containerRef = useRef(null)
     containerRef={containerRef}
   >
     <div className="App">
+   
       {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="agb" element={<AGB />} />
+        <Route path="blog" element={<Blog />} />
+        <Route path="/blog/:articleId" element={<Article/>}/>
+        {/* <Route path="article" element={<Article />} /> */}
       </Routes>
     </div>
     </LocomotiveScrollProvider>
