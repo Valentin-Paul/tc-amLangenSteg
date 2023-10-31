@@ -111,7 +111,8 @@ function HomePage() {
       "Nov",
       "Dez",
     ];
-    return months[element.slice(5, 7) - 1];
+    console.log(element.slice(5, 7));
+    return months[Number(element.slice(5, 7)) -2 ];
   };
 
   const [hue, setHue] = useState(0);
@@ -162,7 +163,7 @@ function HomePage() {
               <h1>{events.headline}</h1>
 
               {/* Rendering single events */}
-              {events.length !== 0
+              {events.events
                 ? events.events.map((event) => {
                     return (
                       <div className="kalender">
@@ -177,10 +178,10 @@ function HomePage() {
                       </div>
                     );
                   })
-                : console.log("error")}
+                : console.log("error single events")}
 
               {/* Rendering permanent events */}
-              {events.length !== 0
+              {events.permanentEvents
                 ? events.permanentEvents.map((event) => {
                     return (
                       <div className="kalender">
