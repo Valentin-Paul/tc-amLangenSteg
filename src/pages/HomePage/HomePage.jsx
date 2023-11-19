@@ -253,22 +253,11 @@ function HomePage() {
                   mannschaften.teams.map((m) => {
                     return (
                       <div className="team">
-                        <h3>{m.ueberschrift}</h3>
-                        <p>
-                          Trainingszeiten Sommer: <br /> {m.trainingSummer}
-                        </p>
-                        <p>
-                          Trainingszeiten Winter (Halle am Postkeller): <br />{" "}
-                          {m.trainingWinter}
-                        </p>
-                        <p>
-                          {" "}
-                          Mannschaftsspiele: <br /> {m.games}
-                        </p>
-                        <p>
-                          {" "}
-                          Mannschaftsführer/in: <br /> {m.teamleader}
-                        </p>
+                      {m.ueberschrift ? <h3>{m.ueberschrift}</h3> : null}
+                      {m.trainingSummer ? <p>Trainingszeiten Sommer: <br /> {m.trainingSummer}</p> : null}
+                      {m.trainingWinter ? <p>Trainingszeiten Winter (Halle am Postkeller): <br />{" "}{m.trainingWinter}</p> : null} 
+                      {m.games ? <p>Mannschaftsspiele: <br /> {m.games}</p> : null}
+                      {m.teamleader ? <p>Mannschaftsführer/in: <br /> {m.teamleader}</p> : null}
                       </div>
                     );
                   })

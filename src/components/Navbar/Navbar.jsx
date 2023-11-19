@@ -6,94 +6,6 @@ import menuIcon from "../../pages/images/menu.png"
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
-  // Subscribe to the AuthContext to gain access to
-  // the values from AuthContext.Provider's `value` prop
-  // const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
-
-    // const { scroll } = useLocomotiveScroll();
-
-  // useEffect(()=>{
-
-  //   // let scroll = new LocomotiveScroll({
-  //   //   el: document.querySelector("[data-scroll-container]"),
-  //   //   smooth: true,
-  //   //   smartphone: {
-  //   //     offset: ["50%", "50"],
-  //   //     breakpoint: 0,
-  //   //     lerp: 1,
-  //   //     // getDirection: true,
-  //   //     smooth: true,
-  //   //     // smoothMobile: true,
-  //   //     scrollFromAnywhere: true,
-  //   //     resetNativeScroll: true
-  //   //   },
-  //   //   tablet: {
-  //   //     lerp: 1,
-  //   //    breakpoint: 0,
-  //   //   // getDirection: true,
-  //   //     smooth: true,
-  //   //   //   smoothMobile: true,
-  //   //     scrollFromAnywhere: true,
-  //   //     resetNativeScroll: true
-  //   //   }
-  //   // })
-
-  //   const anchorLinks = document.querySelectorAll(
-  //     'a[href^=\\#]:not([href$=\\#])'
-  //   );
-  
-  //   anchorLinks.forEach((anchorLink) => {
-  //     let hashval = anchorLink.getAttribute('href');
-  //     let target = document.querySelector(hashval);
-  //     let coordinates = document.getElementById(target.id).getBoundingClientRect().top - 100
-     
-  
-  //     anchorLink.addEventListener('click', (e) => {
-  //       e.preventDefault();
-  //       e.stopPropagation();
-
-  //       // anchorLinks.forEach((anchorLink) => {
-  //       //   anchorLink.classList.remove('active');
-  //       // });
-  
-  //       // e.target.classList.add('active');
-
-  //     //  var coordinates = target.getBoundingClientRect()
-        
-  //       scroll.scrollTo(coordinates)
-        
-  //       console.log(coordinates)
-  //     });
-
-  //   });
-  // },[])
-
-
-
- 
-  // const history = useNavigate();
-  // const { scroll } = useLocomotiveScroll();
-
-  // const scrollToContainer = (containerId) => {
-  //   const container = document.querySelector(containerId);
-  //   if (container) {
-  //     container.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   scroll && scroll.scrollTo(history.location); // Reset scroll position to top of page on route change
-  //   console.log(history.location)
-  // }, [history.location]);
-
-
-  // const scrollToContainer = ( containerId) => {
-
-  //   const container = document.querySelector(containerId);
-  //   if (container) {
-  //     container.scrollIntoView({ behavior: "smooth" });
-  //   }
-  // };
 
   const { scroll } = useLocomotiveScroll();
 
@@ -144,7 +56,7 @@ function Navbar() {
           <li><a className="dropdown-item"  onClick={() => goToSection('#kontakt')}>Kontakt</a></li>
           <li><a className="dropdown-item"  onClick={() => goToSection('#vereinsleitung')}>Vereinsleitung</a></li>
           <li><a className="dropdown-item" href="/agb">AGB/ Impressum</a></li>
-          <li><a className="dropdown-item" href="/blog">Artikel</a></li>
+          <li><a className="dropdown-item" href="/blog">Archiv</a></li>
           </ul>
         </li>
         

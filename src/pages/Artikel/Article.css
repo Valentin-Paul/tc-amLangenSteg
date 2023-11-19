@@ -25,3 +25,21 @@
     height: 0.5rem !important;
     width: 0.5rem !important;
 }
+
+.back-to-article{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+@media (max-width: 769px) {
+.back-to-article{
+    width: 50px;
+    margin-top: 0.5rem !important;
+    padding-right: 0.5rem;
+}
+.back-to-article p{
+    display: none;
+}
+}

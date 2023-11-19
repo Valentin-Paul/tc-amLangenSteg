@@ -108,11 +108,12 @@ function Article() {
         id="article-header"
       >
         <div className="navbar-agb row">
-          <span className="col-5"></span>
-          <a href="/" className="col-2">
+          <span className="col-3"></span>
+          <a href="/" className="col-6">
             Home
           </a>
-          <div className=" col-5 px-5 text-end">
+          <div className=" col-3 px-5 text-end">
+          <a href="/blog" className="back-to-article">
             <svg
               width="50px"
               height="50px"
@@ -135,7 +136,8 @@ function Article() {
                 ></path>{" "}
               </g>
             </svg>
-            <a href="/blog">Artikel</a>
+          <p>Artikel</p>
+          </a>
           </div>
         </div>
 
@@ -162,7 +164,7 @@ function Article() {
             return (
               <div class="row  article-content">
                 <div class="row text-justify">
-                  <div class="col px-5 ">
+                  <div class="col px-2 px-md-5 ">
                     <h3 class="h3 py-2">{sec.secondheadline}</h3>
                     <p class="text-lg fw-light lh-lg mb-0 align-justify text-justify">
                       {sec.description}
